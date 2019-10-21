@@ -6,7 +6,7 @@ Cette section liste les événenemts auxquels vous pouvez souscrire.
 
 ### <a name="agent"></a> Agent situation
 
-> **Topic** : `project-65/prod/user/situation`</br>
+> **Topic** : `project-65/prod/user/situation`  
 > **Description** : changement de situation de l'agent.
 
 Réponse :
@@ -29,7 +29,7 @@ Réponse :
 
 ### <a name="weather"></a> Météo
 
-> **Topic** : `project-65/prod/context/change/weather`</br>
+> **Topic** : `project-65/prod/context/change/weather`  
 > **Description** : changement de météo.
 
 Payload :
@@ -43,7 +43,7 @@ Payload :
 
 ### <a name="air"></a> Qualité de l'air
 
-> **Topic** : `project-65/prod/context/change/air`</br>
+> **Topic** : `project-65/prod/context/change/air`  
 > **Description** : changement de la qualité de l'air.
 
 Payload :

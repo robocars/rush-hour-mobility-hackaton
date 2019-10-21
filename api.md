@@ -4,16 +4,13 @@ Plusieurs API sont mises à votre disposition pour obtenir des informations sur 
 
 ## Agent
 
-> **Base URL** : `http://agent-controller.[NAMESPACE].xp65.renault-digital.com`
->
+> **Base URL** : `http://agent-controller.[NAMESPACE].xp65.renault-digital.com`  
 > **Description** : Cette API permet de récupérer les informations relatives à votre agent.
 
 ### <a name="agent"></a> Agent situation
 
-> **Route** : `/api/user/situation/last`
->
-> **Méthode** : `GET`
->
+> **Route** : `/api/user/situation/last`  
+> **Méthode** : `GET`  
 > **Description** : récupère la dernière situation connue de l'agent.
 
 Réponse :
@@ -36,13 +33,13 @@ Réponse :
 
 ## <a name="context"></a> Context
 
-> **Base URL** : `http://context-controller.[NAMESPACE].xp65.renault-digital.com`</br>
+> **Base URL** : `http://context-controller.[NAMESPACE].xp65.renault-digital.com`  
 > **Description** : Cette API permet de récupérer les informations relatives au contexte extérieur à la MeaooCity.
 
 ### <a name="weather"></a> Météo
 
-> **Route** : `/api/context/weather/current`</br>
-> **Méthode** : `GET`</br>
+> **Route** : `/api/context/weather/current`  
+> **Méthode** : `GET`  
 > **Description** : récupère la météo actuelle.
 
 Réponse :
@@ -56,8 +53,8 @@ Réponse :
 
 ### <a name="air"></a> Qualité de l'air
 
-> **Route** : `/api/context/air/current`</br>
-> **Méthode** : `GET`</br>
+> **Route** : `/api/context/air/current`  
+> **Méthode** : `GET`  
 > **Description** : récupère la qualité de l'air actuelle.
 
 Réponse :
