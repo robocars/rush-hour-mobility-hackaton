@@ -20,9 +20,9 @@ Votre identifiant de namespace vous permettra de vous connecter aux différentes
 
 | name     | base url |
 |----------|------|
-| Graph    | `http://graph.[NAMESPACE].xp65.renault-digital.com` |
-| Context  | `http://context-controller.[NAMESPACE].xp65.renault-digital.com` |
-| Agent    | `http://agent-controller.[NAMESPACE].xp65.renault-digital.com` |
+| [Graph](api.md#graph)    | `http://graph.[NAMESPACE].xp65.renault-digital.com` |
+| [Context](api.md#context)  | `http://context-controller.[NAMESPACE].xp65.renault-digital.com` |
+| [Agent](api.md#agent)    | `http://agent-controller.[NAMESPACE].xp65.renault-digital.com` |
 
 
 [< retour](README.md)
