@@ -10,8 +10,8 @@ Description : Cette API permet de récupérer les informations relatives à votr
 
 ### <a name="agent"></a> Agent situation
 
-Route : `/api/user/situation/last`
-Méthode : `GET`
+Route : `/api/user/situation/last`</br>
+Méthode : `GET`</br>
 Description : récupère la dernière situation connue de l'agent.
 
 Réponse :
@@ -40,8 +40,8 @@ Description : Cette API permet de récupérer les informations relatives au cont
 
 ### <a name="weather"></a> Météo
 
-Route : `/api/context/weather/current`
-Méthode : `GET`
+Route : `/api/context/weather/current`</br>
+Méthode : `GET`</br>
 Description : récupère la météo actuelle.
 
 Réponse :
@@ -55,8 +55,8 @@ Réponse :
 
 ### <a name="air"></a> Qualité de l'air
 
-Route : `/api/context/air/current`
-Méthode : `GET`
+Route : `/api/context/air/current`</br>
+Méthode : `GET`</br>
 Description : récupère la qualité de l'air actuelle.
 
 Réponse :
