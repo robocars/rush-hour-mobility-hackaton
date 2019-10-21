@@ -4,5 +4,12 @@ root = true
 end_of_line = lf
 insert_final_newline = true
 
+# vscode does not handle correctly this next line.
+# As trailing spaces have a special meaning in md files, you
+# can circumvent the problem by adding the following lines in
+# your settings.json file :
+#     "[markdown]": {
+#      "files.trimTrailingWhitespace": false
+#    }
 [*.md]
 trim_trailing_whitespace = false
