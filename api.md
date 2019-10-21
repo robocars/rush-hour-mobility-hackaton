@@ -29,9 +29,9 @@ Réponse :
 Détail de la réponse :
 |champ|description|
 |---|---|
-|`vehicle_type`|Indique le moyen de transport utilisé par l'agent (dernier ou actuel). Ce champ peut prendre n'importer quelle valeur spécifiée dans la colonne *code technique* des [moyens de transport](city.md#vehicle_type) |
+|`vehicle_type`|Indique le moyen de transport utilisé par l'agent (dernier ou actuel). Ce champ peut prendre n'importe quelle valeur spécifiée dans la colonne *code technique* des [moyens de transport](city.md#vehicle_type) |
 |`position`|Position de l'agent dans le [système de coordonnées de la MeaooCity](city.md#coord)|
-|`total_cost`|Correspond au temps (virtuel) passé par l'agent dans les transports. Ce temps (aussi connu sous le nom de *MeaooTime*) est exprimé en minutes.|
+|`total_cost`|Correspond au *MeaooTime*, le temps virtuel passé par l'agent dans les transports. Cette valeur est exprimée en minutes.|
 
 
 ## <a name="context"></a> Context
