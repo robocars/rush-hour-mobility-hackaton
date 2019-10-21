@@ -22,9 +22,9 @@ Pour effectuer des déplacements, l'agent a à sa disposition 4 possibilités.
 
 ## <a name="coord"></a> Système de coordonnées
 
-Les coordonnées dans la MeaooCity sont définies par un plan orthonormé exprimé en coordonnées cartésiennes `x` et `y`
+Les coordonnées dans la MeaooCity sont définies par un plan orthonormé exprimé en coordonnées cartésiennes `x` et `y` :
 
-![ ](https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/2D_Cartesian_Coordinates_Fr.svg/1024px-2D_Cartesian_Coordinates_Fr.svg.png)
+![Un plan orthonormé](https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/2D_Cartesian_Coordinates_Fr.svg/400px-2D_Cartesian_Coordinates_Fr.svg.png "Un plan orthonormé")
 
 Les unités utilisées sont exprimées en mètres et correspondent à la localisation exacte dans la MeaooCity visible dans l'espace de démo.
 
@@ -32,4 +32,4 @@ Les unités utilisées sont exprimées en mètres et correspondent à la localis
 
 L'environnement technique de la MeaooCity est une réplique de l'environnement de développement qui vous sera mis à disposition.
 
-Prévoyez de pouvoir changer les informations de connexion à l'écosystème lors de vos développements, à savoir les URLs de connexion aux APIs et l'adresse et les credentials du broker de message.
+> **PENSEZ-Y** : Prévoyez de pouvoir changer les informations de connexion à l'écosystème lors de vos développements, à savoir les URLs de connexion aux APIs et l'adresse et les credentials du broker de message. Vous pourrez ainsi facilement passer de votre environnement de développement à l'environnement de démo/test.
