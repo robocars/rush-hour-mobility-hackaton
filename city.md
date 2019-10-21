@@ -6,6 +6,8 @@ Vous y aurez accès toutes les 5 heures pour une durée maximale de 30 minutes a
 
 La [démo finale](demo.md) aura également lieu dans la MeaooCity.
 
+![en orange, la zone de l'aéroport](assets/meaoocity.png "en orange, la zone de l'aéroport")
+
 ## <a name="vehicle_type"></a> Moyens de transport
 
 Pour effectuer des déplacements, l'agent a à sa disposition 4 possibilités.
