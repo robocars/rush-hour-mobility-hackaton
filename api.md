@@ -4,13 +4,16 @@ Plusieurs API sont mises à votre disposition pour obtenir des informations sur 
 
 ## Agent
 
-> **Base URL** : `http://agent-controller.[NAMESPACE].xp65.renault-digital.com`</br>
+> **Base URL** : `http://agent-controller.[NAMESPACE].xp65.renault-digital.com`
+>
 > **Description** : Cette API permet de récupérer les informations relatives à votre agent.
 
 ### <a name="agent"></a> Agent situation
 
-> **Route** : `/api/user/situation/last`</br>
-> **Méthode** : `GET`</br>
+> **Route** : `/api/user/situation/last`
+>
+> **Méthode** : `GET`
+>
 > **Description** : récupère la dernière situation connue de l'agent.
 
 Réponse :
