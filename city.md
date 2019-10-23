@@ -10,7 +10,7 @@ La [démo finale](demo.md) aura également lieu dans la MeaooCity.
 
 ## <a name="vehicle_type"></a> Moyens de transport
 
-Pour effectuer des déplacements, l'agent a à sa disposition 4 possibilités.
+L'agent a à sa disposition 4 types de déplacement.
 
 | Moyen | code technique | MeaooTime par unitè de longueur | Description |
 |---|---|---|---|
@@ -19,6 +19,7 @@ Pour effectuer des déplacements, l'agent a à sa disposition 4 possibilités.
 | A vélo | `bike` | 00:02:00 MeaooTime | A vélo, l'agent peut emprunter toutes les routes à l'exception de la zone de l'aéroport et à condition qu'il ne soit pas dans le métro et qu'il soit proche d'un vélo en free floating.</br>Il peut circuler dans les deux sens sur une route.</br>Il peut changer de moyen de transport à tout moment. |
 | En voiture | `car` | 00:01:00 MeaooTime | En voiture, l'agent peut se déplacer sur toutes les routes à condition qu'une voiture soit proche de lui. A défaut, il peut en appeler une pour venir le chercher.</br>Les routes sont à sens unique.</br>Il peut changer de moyen de transport à tout moment.|
 
+Pour effectuer un déplacement, utiliser la [commande de déplacement](command.md#move).
 
 ## <a name="coord"></a> Système de coordonnées
 

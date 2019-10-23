@@ -4,6 +4,7 @@ This repo contains the documentation needed by a hackathon contender to particip
 1. [Votre environnement de dev mobilité - MeaooMap](map.md)
     - [le contexte météo/pollution](context.md)
     - [Les APIs](api.md)
+    - [Les commandes](command.md)
     - [Les événements](events.md)
     - [Exemples d'appels apis/evts](samples.md)
 1. [L'environnement MEAOO complet de démo](demo.md)
