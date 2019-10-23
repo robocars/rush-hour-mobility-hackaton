@@ -16,13 +16,6 @@ Les informations de votre environnement sont composées de :
 
 ## Votre namespace
 
-Votre identifiant de namespace vous permettra de vous connecter aux différentes APIs de récupération d'état qui sont mises à votre disposition. Une description complète de leur fonctionnement et des signatures de méthodes est détaillée ailleurs, mais nous vous listons ici les adresses de base de ces APIs (remplacez `[NAMESPACE]` par votre identifiant de namespace) :
-
-| name     | base url |
-|----------|------|
-| [Graph](api.md#graph)    | `http://graph.[NAMESPACE].xp65.renault-digital.com` |
-| [Context](api.md#context)  | `http://context-controller.[NAMESPACE].xp65.renault-digital.com` |
-| [Agent](api.md#agent)    | `http://agent-controller.[NAMESPACE].xp65.renault-digital.com` |
-
+Votre identifiant de namespace vous permettra de vous connecter aux différentes APIs de récupération d'état qui sont mises à votre disposition ainsi qu'à la [MeaooMap](map.md).
 
 [< retour](README.md)
