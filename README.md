@@ -8,5 +8,5 @@ This repo contains the documentation needed by a hackathon contender to particip
     - [Les événements](events.md)
     - [Exemples d'appels apis/evts](samples.md)
 1. [L'environnement MEAOO complet de démo](demo.md)
-    - Avec en plus [La MeaooCity](city.md) et [La MeaooCar](car.md)
-1. [La démo finale](demofinale.md)
+    - Avec en plus [La MeaooCity](city.md) et [la MeaooCar](car.md)
+1. [La démo finale](demo.md#finale)
