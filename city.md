@@ -1,7 +1,7 @@
 # La MeaooCity
 
-La MeaooCity est la matérialisation physique de notre ville d'une taille de 22m x 6m. 
-Les routes sont matérialisées par des chemins de led qui réagissent aux événements de l'écosystème. La matérialisation physique permet de faire le lien entre le monde digital, et notre monde réel.
+La MeaooCity est la matérialisation physique de la MeaooMap, elle mesure 22m x 6m. 
+Les routes sont matérialisées par des rubans de led qui réagissent aux événements de l'écosystème. La matérialisation physique permet de faire le lien entre le monde digital, et notre monde réel.
 La taille de la ville permet quant à elle de faire circuler la [MeaooCar](car.md).
 
 ## L'environnement technique

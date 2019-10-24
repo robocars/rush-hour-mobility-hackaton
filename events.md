@@ -2,7 +2,7 @@
 
 L'écosystème Meaoo est hautement réactif et repose entièrement sur l'échange d'événements en temps réel.
 
-Cette section liste les événenemts auxquels vous pouvez souscrire.
+Cette section liste les événements émis par la MeaooMap auxquels vous pouvez souscrire.
 
 ### <a name="agent"></a> Agent situation
 
@@ -54,3 +54,17 @@ Payload :
 |champ|description|
 |---|---|
 |`condition`|Indique la nouvelle qualité de l'air. Ce champ peut prendre n'importe quelle valeur spécifiée dans la colonne *code technique* de la [qualité de l'air](context.md#air) |
+
+## <a name="incident"></a> Les incidents de la ville
+
+Les événements incidents peuvent indiquer plusieurs situations:
+- ralentissements
+- pannes
+- *A compléter*
+
+Les événements incidents entraînent un "freeze" de la ville et du déplacement en cours. Une commande venant de l'application suite à une interaction utilisateur relancera l'écosystème  
+
+## <a name="missionstart"></a> Evénement initial de déclenchement de la mission
+
+*A faire*
+

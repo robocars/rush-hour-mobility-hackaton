@@ -8,7 +8,7 @@ Elle est matérialisée par la [MeaooCity](city.md) dans l'espace de [démo](dem
 
 ## <a name="vehicle_type"></a> Moyens de transport
 
-L'agent a à sa disposition 4 types de déplacement.
+L'agent a à sa disposition 4 moyens de transport.
 
 | Moyen | code technique | MeaooTime par unitè de longueur | Description |
 |---|---|---|---|
@@ -21,7 +21,7 @@ Pour effectuer un déplacement, utiliser la [commande de déplacement](command.m
 
 ## <a name="coord"></a> Système de coordonnées
 
-Les coordonnées dans la MeaooCity sont définies par un plan orthonormé exprimé en coordonnées cartésiennes `x` et `y` :
+Les coordonnées dans la MeaooCity sont définies par un plan orthonormé exprimé en coordonnées cartésiennes `x` et `y`, l'origine (0,0) se trouve dans le coin en bas à gauche de la ville:
 
 ![Un plan orthonormé](https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/2D_Cartesian_Coordinates_Fr.svg/400px-2D_Cartesian_Coordinates_Fr.svg.png "Un plan orthonormé")
 

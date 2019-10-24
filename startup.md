@@ -1,12 +1,12 @@
 # Votre accueil
 
-Les équipes de *BeMyApp* et les équipes de *Renault-Digital* sont là pour vous accueillir et vous accompagner au long de ce Week-End.
+Les équipes de *Renault-Digital* et de *BeMyApp* sont là pour vous accueillir et vous accompagner au long de ce Week-End.
 
-Plus particulièrement, la core-team de MeaooCar est à votre disposition pour résoudre les problèmes techniques liés aux environnements mis à votre disposition, ou répondre à vos questions concernant le fonctionnement de l'écosystème et des APIs qui vous sont founies.
+Plus particulièrement, la core-team de MeaooCar est à votre disposition pour résoudre les problèmes techniques liés aux environnements mis à votre disposition, ou répondre à vos questions concernant le fonctionnement de l'écosystème et des APIs qui vous sont fournies.
 
 ## Vos données utiles
 
-A votre arrivée, vous aurez besoin de récupérer la salle qui est assignée à votre équipe, ainsi que les informations sur votre environnement de développement.
+A votre arrivée, *vous aurez besoin de récupérer la salle qui est assignée à votre équipe, ainsi que les informations sur votre environnement de développement*.
 
 Les informations de votre environnement sont composées de :
 1. Un identifiant de namespace

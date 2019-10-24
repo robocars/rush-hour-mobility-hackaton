@@ -1,17 +1,17 @@
 # Les commandes
 
-Les commandes sont des événements à publier sur le broker de massages. Ils sont écoutés par l'écosystème et interprétés pour réaliser les actions associées.
+Les commandes sont des événements à publier sur le broker de messages. Ils sont écoutés par l'écosystème Moeaoo et interprétés pour réaliser les actions associées.
 
 ## Utilisables lors de la démo
 
-Ces commandes sont les seules qui seront acceptées lors de la démo par l'écosystème.
+*Ces commandes sont les seules qui seront acceptées lors de la démo par l'écosystème*.
 
 ### <a name="move"></a> Déplacer l'agent
 
 > **Protocol** : MQTT  
 > **Topic** : `project-65/prod/user/path`  
 > **QoS** : `0`  
-> **Description** : déplace l'agent depuis sa position courante vers une cible, en utilisant le moyen de transport indiquié <u>et le chemin le plus rapide</u>.
+> **Description** : déplace l'agent depuis sa position courante vers une cible, en utilisant le moyen de transport indiqué <u>et le chemin le plus rapide</u>.
 
 Payload :
 ```json
