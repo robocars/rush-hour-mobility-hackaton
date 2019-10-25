@@ -8,4 +8,4 @@ Meaoocar repose sur une architecture modulaire et communique avec le cloud en te
 
 4eme moyen de transport de l'écosystème Meaoo, elles seront à votre disposition pour vos déplacement en véhicules autonomes
 
-Les intéractions avec les MeaooCars se ferontàtravers les commandes comme pour les autres moyens de transport
+Les intéractions avec les MeaooCars se feront à travers les commandes comme pour les autres moyens de transport

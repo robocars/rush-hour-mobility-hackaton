@@ -145,8 +145,8 @@ Payload :
 |`bike`|tableau regroupant les voies "open" et "close" pour les vélos|
 |`walk`|tableau regroupant les voies "open" et "close" pour les déplacements à pieds|
 |`id`|identifiant de la voie de ciculation concernée telle que répertoriée dans l'api graph|
-|`location`|positions dans la ville des extrémité du segemnt de ligne concerné|
-|`state`|état de la voie de ciculation concernée|
+|`location`|positions dans le [système de coordonnées de la MeaooCity](city.md#coord) des extrémités du segemnt de ligne concerné|
+|`state`|état de la voie de ciculation concernée (`open` ou `close`)|
 
 ### <a name="route"></a> Fermeture/ouverture de ligne de métro
 
@@ -178,8 +178,8 @@ Payload :
 |champ|description|
 |---|---|
 |`id`|identifiant du segment de ligne de métro concerné telle que répertoriée dans l'api graph|
-|`location`|positions dans la ville des extrémité du segemnt de ligne concerné|
-|`state`|état du segment de ligne de métro concerné|
+|`location`|positions dans le [système de coordonnées de la MeaooCity](city.md#coord) des extrémités du segemnt de ligne concerné|
+|`state`|état de la voie de ciculation concernée (`open` ou `close`)|
 
 ### <a name="route"></a> Ralentissement des voies de circulation
 
@@ -211,8 +211,8 @@ Payload :
 |champ|description|
 |---|---|
 |`id`|identifiant de la voie de ciculation concernée telle que répertoriée dans l'api graph|
-|`location`|positions dans la ville des extrémité du segemnt de ligne concerné|
-|`slowing_factor`|facteur de fluidité de la voie de ciculation concernée. Plage de valeurs:[1,10], ce sont des entiers, 1 = traffic fluide, 10 = traffic très  lent|
+|`location`|positions dans le [système de coordonnées de la MeaooCity](city.md#coord) des extrémités du segemnt de ligne concerné|
+|`slowing_factor`|facteur de fluidité de la voie de ciculation concernée. Plage de valeurs:[1,10], ce sont des entiers, 1 = traffic fluide, 10 = traffic 10x plus lent|
 
 ### <a name="route"></a> Panne de robotaxi
 
