@@ -4,12 +4,15 @@ Les commandes sont des événements à publier sur le broker de messages. Ils so
 
 ## Commandes disponibles sur votre environnement meaoo de dev
 
+Ces commandes vous sont fournies afin de faciliter vos développements et vos tests. Elles ont un impact direct sur l'écosystème et permettent de manipuler [le contexte](context.md), l'agent, ou le graphe par exemple. 
+Lors de la démo finale, ou pendant vos tests sur la MeaooCity réelle, ces commandes ne seront pas acceptées et vous retourneront au mieux un message d'erreur, au pire rien.
+
 ### <a name="reset"></a> Reset
 
 > **Protocol** : MQTT  
 > **Topic** : `project-65/prod/city/reset`  
 > **QoS** : `0`  
-> **Description** : permet de réinitialiser le score de l'agent
+> **Description** : permet de réinitialiser le MeaooTime de l'agent
 
 Payload : vide
 
@@ -35,7 +38,7 @@ Payload :
 |champ|description|
 |---|---|
 |`vehicle_type`|Indique le moyen de transport avec lequel déplacer l'agent. Ce champ peut prendre n'importe quelle valeur spécifiée dans la colonne *code technique* des [moyens de transport](city.md#vehicle_type). Au final la valeur peut rester fixe car elle n'a pas d'incidence sur la téléportation |
-|`path`|doit contenir impérativement un array de deux valeurs, chacune d'entre elle étant un array contenant une position x et y. Le premier array contient les coordonnées d'atterrissage de la téléportation et le second array contient l'endroit où téléporter l'agent (dans notre cas x = 20.9 et Y=5.6. Le second array contient la position de destination +/- 0.1 sur x ou sur y. C'est comme si on téléportait sur le premier point et que l'on glissait tout de suite sur le second |
+|`path`|doit contenir impérativement un array de deux valeurs, chacune d'entre elle étant un array contenant une position x et y. Le second array contient l'endroit où téléporter l'agent (dans notre cas x=20.9 et Y=5.6. Le premier array est la même position décalée de +/- 0.1 sur x ou sur y |
 |`cost`|doit impérativement contenir deux valeurs à 0 (donc à ne pas modifier) |
 
 ### <a name="circulation"></a> Changer les conditions de circulation
@@ -63,7 +66,7 @@ Payload :
 > **Protocol** : MQTT  
 > **Topic** : `project-65/prod/city/morph/lines_state`  
 > **QoS** : `0`  
-> **Description** : ferme ou ouvre une section de ligne de métro. Les lignes étant bi directionnelle, une fermeture = 1 sens de circulation. Il est donc possible de fermer seulement le sens de circulation A->B et pas B->A
+> **Description** : ferme ou ouvre une section de ligne de métro. Les lignes étant bi directionnelle, une statut est valable pour 1 sens de circulation. Il est donc possible de fermer seulement le sens de circulation A->B et pas B->A
 
 Payload :
 ```json
@@ -72,19 +75,18 @@ Payload :
   {"line": "edge_12", "state": "close"}
 ]
 ```
-- c'est un tableau de 0 ou N entrées
 
 |champ|description|
 |---|---|
 |`line`|identifiant du segment de route sur lequel appliquer l'état indiqué dans "state"|
-|`state`|close ou open|
+|`state`|`close` ou `open`|
 
 ### <a name="fermerouvrirmetro"></a> Fermer/ouvrir une route
 
 > **Protocol** : MQTT  
 > **Topic** : `project-65/prod/city/morph/roads_status`  
 > **QoS** : `0`  
-> **Description** : Description ; ferme ou ouvre une route pour un moyen de transport donné. Certains moyens de transport routiers étant bi directionnels, une fermeture = 1 sens de circulation. Il est donc possible de fermer seulement le sens de circulation A->B et pas B->A
+> **Description** : Description ; ferme ou ouvre une route pour un moyen de transport donné. Certains moyens de transport routiers étant bi directionnels, un statut = 1 sens de circulation. Il est donc possible de fermer seulement le sens de circulation A->B et pas B->A
 
 Payload :
 ```json
@@ -146,9 +148,4 @@ Payload :
 * Les [règles de changement de transport](city.md#vehicle_type) ne sont pas respectées.
 * La destination est égale à la position courante.
 * Aucun [chemin](graph.md) ne permet d'aller à la cible.
-
-## Utilisables sur votre environnement de développement
-
-Ces commandes vous sont fournies afin de faciliter vos développements et vos tests. Elles ont un impact direct sur l'écosystème et permettent de manipuler [le contexte](context.md), l'agent, ou le graphe par exemple. 
-Lors de la démo finale, ou pendant vos tests sur la MeaooCity réelle, ces commandes ne seront pas acceptées et vous retourneront au mieux un message d'erreur, au pire rien.
 

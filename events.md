@@ -145,7 +145,7 @@ Payload :
 |`bike`|tableau regroupant les voies "open" et "close" pour les vélos|
 |`walk`|tableau regroupant les voies "open" et "close" pour les déplacements à pieds|
 |`id`|identifiant de la voie de ciculation concernée telle que répertoriée dans l'api graph|
-|`location`|positions dans le [système de coordonnées de la MeaooCity](city.md#coord) des extrémités du segemnt de ligne concerné|
+|`location`|positions dans le [système de coordonnées de la MeaooCity](city.md#coord) des extrémités du segment de ligne concerné|
 |`state`|état de la voie de ciculation concernée (`open` ou `close`)|
 
 ### <a name="route"></a> Fermeture/ouverture de ligne de métro
@@ -178,7 +178,7 @@ Payload :
 |champ|description|
 |---|---|
 |`id`|identifiant du segment de ligne de métro concerné telle que répertoriée dans l'api graph|
-|`location`|positions dans le [système de coordonnées de la MeaooCity](city.md#coord) des extrémités du segemnt de ligne concerné|
+|`location`|positions dans le [système de coordonnées de la MeaooCity](city.md#coord) des extrémités du segment de ligne concerné|
 |`state`|état de la voie de ciculation concernée (`open` ou `close`)|
 
 ### <a name="route"></a> Ralentissement des voies de circulation
