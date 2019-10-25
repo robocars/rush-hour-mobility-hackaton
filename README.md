@@ -8,15 +8,15 @@ This repo contains the documentation needed by a hackathon contender to particip
 1. [Votre environnement de dev mobilité - MeaooMap](map.md)
     - [Les moyens de transport disponibles et le MeaooTime](map.md#vehicle_type)
     - [le contexte météo et pollution actuel](context.md)
-    - [Les APIs Meaoomap](api.md) *A compléter*
-    - [Les événements émis par MeaooMap](events.md) *A compléter*
+    - [Les APIs Meaoomap](api.md)
+    - [Les événements émis par MeaooMap](events.md) 
     - [L'evt spécial de déclenchement de la mission](events.md#missionstart) *A compléter*
     - [Les commandes - evts vers MeaooMap](command.md) 
-    - Video du fonctionnement de meaooMap
+    - Video du fonctionnement de meaooMap *A compléter*
 1. [L'environnement MEAOO complet de démo](demo.md)
     - Avec en plus [La MeaooCity](city.md), [la MeaooCar](car.md) et les 3 écrans géants de présentation
 1. [La démo finale](demo.md#finale)
-1. [Schéma d'interaction de votre application avec MeaooMap](schema.md)
+1. [Schéma d'interaction de votre application avec MeaooMap](schema.md) *A compléter*
     - Une image avec toutes les apis, les événements, l'application et l'utilisateur en interaction
-1. [Rappel du scénario](scenario.md)
+1. [Rappel du scénario](scenario.md) *A compléter*
 
