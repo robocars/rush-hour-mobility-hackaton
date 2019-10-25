@@ -69,7 +69,7 @@ Les événements incidents entraînent un "freeze" de la ville et du déplacemen
 
 ### <a name="route"></a> Fermeture/ouverture de route
 
-> **Topic** : `project-65/prod/city/morph/roads_status`  
+> **Topic** : `project-65/prod/environment/change/roads_status`  
 > **Description** : événement concernant les voies dont l'accessibilité vient d'être modifiée pour les robotaxis(car), les vélos (bike) et à pieds (walk). 
 RAPPEL: Le métro est géré à part
 
@@ -78,24 +78,62 @@ Payload :
 [
     {
         "car": [
-            {"road": "edge_16", "state": "open"},
-            {"road": "edge_25", "state": "close"}
+            { 
+                "id":"edge_10",
+                "locations": {
+                    "from":{"x":0.2,"y":0.8},
+                    "to":{"x":0.2,"y":1.8}
+                },
+                "state":"close"
+            },
+            { 
+                "id":"edge_50",
+                "locations": {
+                    "from":{"x":1.2,"y":0.8},
+                    "to":{"x":1.2,"y":1.8}
+                },
+                "state":"open"
+            }
         ]
     },
     {
         "bike": [
-            {"road": "edge_16", "state": "open"},
-            {"road": "edge_25", "state": "close"},
-            {"road": "edge_44", "state": "close"},
-            {"road": "edge_82", "state": "close"}
+            { 
+                "id":"edge_10",
+                "locations": {
+                    "from":{"x":0.2,"y":0.8},
+                    "to":{"x":0.2,"y":1.8}
+                },
+                "state":"close"
+            },
+            { 
+                "id":"edge_50",
+                "locations": {
+                    "from":{"x":1.2,"y":0.8},
+                    "to":{"x":1.2,"y":1.8}
+                },
+                "state":"open"
+            }
         ]
     },
     {
         "walk": [
-            {"road": "edge_16", "state": "open"},
-            {"road": "edge_25", "state": "close"},
-            {"road": "edge_44", "state": "close"},
-            {"road": "edge_82", "state": "close"}
+            { 
+                "id":"edge_10",
+                "locations": {
+                    "from":{"x":0.2,"y":0.8},
+                    "to":{"x":0.2,"y":1.8}
+                },
+                "state":"close"
+            },
+            { 
+                "id":"edge_50",
+                "locations": {
+                    "from":{"x":1.2,"y":0.8},
+                    "to":{"x":1.2,"y":1.8}
+                },
+                "state":"open"
+            }
         ]
     }
 ]
@@ -106,47 +144,74 @@ Payload :
 |`car`|tableau regroupant les voies "open" et "close" pour les robotaxis|
 |`bike`|tableau regroupant les voies "open" et "close" pour les vélos|
 |`walk`|tableau regroupant les voies "open" et "close" pour les déplacements à pieds|
-|`road`|identifiant de la voie de ciculation concernée telle que répertoriée dans l'api graph|
+|`id`|identifiant de la voie de ciculation concernée telle que répertoriée dans l'api graph|
+|`location`|positions dans la ville des extrémité du segemnt de ligne concerné|
 |`state`|état de la voie de ciculation concernée|
 
 ### <a name="route"></a> Fermeture/ouverture de ligne de métro
 
-> **Topic** : `project-65/prod/city/morph/lines_state`  
+> **Topic** : `project-65/prod/environment/change/lines_state`  
 > **Description** : événement concernant l'accessibilité des lignes de métro
 
 Payload :
 ```json
 [
-    {"line": "edge_0", "state": "open"},
-    {"line": "edge_5", "state": "open"},
-    {"line": "edge_15", "state": "close"},
-    {"line": "edge_16", "state": "close"},
-    {"line": "edge_21", "state": "close"},
-    {"line": "edge_22", "state": "close"}
+    { 
+        "id":"edge_10",
+        "locations": {
+            "from":{"x":0.2,"y":0.8},
+            "to":{"x":0.2,"y":1.8}
+        },
+        "state":"close"
+    },
+    { 
+        "id":"edge_50",
+        "locations": {
+            "from":{"x":1.2,"y":0.8},
+            "to":{"x":1.2,"y":1.8}
+        },
+        "state":"open"
+    }
 ]
 ```
 
 |champ|description|
 |---|---|
-|`line`|identifiant du segment de ligne de métro concerné telle que répertoriée dans l'api graph|
+|`id`|identifiant du segment de ligne de métro concerné telle que répertoriée dans l'api graph|
+|`location`|positions dans la ville des extrémité du segemnt de ligne concerné|
 |`state`|état du segment de ligne de métro concerné|
 
 ### <a name="route"></a> Ralentissement des voies de circulation
 
-> **Topic** : `project-65/prod/city/morph/traffic_conditions`  
+> **Topic** : `project-65/prod/environment/change/traffic_conditions`  
 > **Description** : événement concernant les voies de ciculation subissant un changement de la fluidité du traffic
 
 Payload :
 ```json
 [
-    {"road": "edge_54", "slowing_factor": 3},
-    {"road": "edge_48", "slowing_factor": 3}
+    { 
+        "id":"edge_10",
+        "locations": {
+            "from":{"x":0.2,"y":0.8},
+            "to":{"x":0.2,"y":1.8}
+        },
+        "slowing_factor":3
+    },
+    { 
+        "id":"edge_50",
+        "locations": {
+            "from":{"x":1.2,"y":0.8},
+            "to":{"x":1.2,"y":1.8}
+        },
+        "slowing_factor":1
+    }
 ]
 ```
 
 |champ|description|
 |---|---|
-|`road`|identifiant de la voie de ciculation concernée telle que répertoriée dans l'api graph|
+|`id`|identifiant de la voie de ciculation concernée telle que répertoriée dans l'api graph|
+|`location`|positions dans la ville des extrémité du segemnt de ligne concerné|
 |`slowing_factor`|facteur de fluidité de la voie de ciculation concernée. Plage de valeurs:[1,10], ce sont des entiers, 1 = traffic fluide, 10 = traffic très  lent|
 
 ### <a name="route"></a> Panne de robotaxi
