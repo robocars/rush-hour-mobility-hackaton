@@ -2,7 +2,120 @@
 
 Les commandes sont des événements à publier sur le broker de messages. Ils sont écoutés par l'écosystème Moeaoo et interprétés pour réaliser les actions associées.
 
-## Utilisables lors de la démo
+## Commandes disponibles sur votre environnement meaoo de dev
+
+### <a name="reset"></a> Reset
+
+> **Protocol** : MQTT  
+> **Topic** : `project-65/prod/city/reset`  
+> **QoS** : `0`  
+> **Description** : permet de réinitialiser le score de l'agent
+
+Payload : vide
+
+### <a name="reset"></a> Téléporter l'agent
+
+> **Protocol** : MQTT  
+> **Topic** : `project-65/prod/user/path-to-target`  
+> **QoS** : `0`  
+> **Description** : téléporte l'agent à un endroit de la map. Permet de tester les cas que l'on souhaite
+
+Payload :
+```json
+{
+    "vehicle_type": "walk",
+    "path": [
+        [21, 5.6],
+        [20.9, 5.6]
+    ],
+    "costs": [0.0, 0.0]
+}
+```
+
+|champ|description|
+|---|---|
+|`vehicle_type`|Indique le moyen de transport avec lequel déplacer l'agent. Ce champ peut prendre n'importe quelle valeur spécifiée dans la colonne *code technique* des [moyens de transport](city.md#vehicle_type). Au final la valeur peut rester fixe car elle n'a pas d'incidence sur la téléportation |
+|`path`|doit contenir impérativement un array de deux valeurs, chacune d'entre elle étant un array contenant une position x et y. Le second array contient l'endroit où téléporter l'agent (dans notre cas x = 20.9 et Y=5.6. Le premier array contient la position de destination +/- 0.1 sur x ou sur y |
+|`cost`|doit impérativement contenir deux valeurs à 0 (donc à ne pas modifier) |
+
+### <a name="circulation"></a> Changer les conditions de circulation
+
+> **Protocol** : MQTT  
+> **Topic** : `project-65/prod/city/morph/traffic_conditions`  
+> **QoS** : `0`  
+> **Description** : modifie les conditions de circulation dans la ville (n'affecte que le déplacement en voiture)
+
+Payload :
+```json
+[
+	{"road": "edge_67", "slowing_factor": 3},
+	{"road": "edge_68", "slowing_factor": 3}
+]
+```
+
+|champ|description|
+|---|---|
+|`road`|identifiant du segment de route sur lequel appliquer le niveau de fluidité souhaité du traffic|
+|`slowing_factor`|facteur de fluidité de la voie de ciculation concernée. Plage de valeurs:[1,10], ce sont des entiers, 1 = traffic fluide, 10 = traffic 10x plus lent|
+
+### <a name="fermerouvrirmetro"></a> Fermer/ouvrir une ligne de métro
+
+> **Protocol** : MQTT  
+> **Topic** : `project-65/prod/city/morph/lines_state`  
+> **QoS** : `0`  
+> **Description** : ferme ou ouvre une section de ligne de métro. Les lignes étant bi directionnelle, une fermeture = 1 sens de circulation. Il est donc possible de fermer seulement le sens de circulation A->B et pas B->A
+
+Payload :
+```json
+[
+  {"line": "edge_6", "state": "close"},
+  {"line": "edge_12", "state": "close"}
+]
+```
+- c'est un tableau de 0 ou N entrées
+
+|champ|description|
+|---|---|
+|`line`|identifiant du segment de route sur lequel appliquer l'état indiqué dans "state"|
+|`state`|close ou open|
+
+### <a name="fermerouvrirmetro"></a> Fermer/ouvrir une route
+
+> **Protocol** : MQTT  
+> **Topic** : `project-65/prod/city/morph/roads_status`  
+> **QoS** : `0`  
+> **Description** : Description ; ferme ou ouvre une route pour un moyen de transport donné. Certains moyens de transport routiers étant bi directionnels, une fermeture = 1 sens de circulation. Il est donc possible de fermer seulement le sens de circulation A->B et pas B->A
+
+Payload :
+```json
+[
+  {
+      "car": [
+          {"road": "edge_54", "state": "close"}
+      ]
+  },
+  {
+      "bike": [
+          {"road": "edge_12", "state": "close"}
+      ]
+  },
+  {
+      "walk": [
+          {"road": "edge_32", "state": "close"}
+      ]
+  }
+]
+```
+
+|champ|description|
+|---|---|
+|`car`|tableau regroupant les voies "open" et "close" pour les robotaxis|
+|`bike`|tableau regroupant les voies "open" et "close" pour les vélos|
+|`walk`|tableau regroupant les voies "open" et "close" pour les déplacements à pieds|
+|`road`|identifiant de la voie de ciculation concernée telle que répertoriée dans l'api graph|
+|`state`|état de la voie de ciculation concernée (`open` ou `close`)|
+
+## Commandes disponibles sur l'environnement meaoo de démo
 
 *Ces commandes sont les seules qui seront acceptées lors de la démo par l'écosystème*.
 

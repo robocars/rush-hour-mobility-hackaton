@@ -211,7 +211,7 @@ Payload :
 |champ|description|
 |---|---|
 |`id`|identifiant de la voie de ciculation concernée telle que répertoriée dans l'api graph|
-|`location`|positions dans le [système de coordonnées de la MeaooCity](city.md#coord) des extrémités du segemnt de ligne concerné|
+|`location`|positions dans le [système de coordonnées de la MeaooCity](city.md#coord) des extrémités du segment de ligne concerné|
 |`slowing_factor`|facteur de fluidité de la voie de ciculation concernée. Plage de valeurs:[1,10], ce sont des entiers, 1 = traffic fluide, 10 = traffic 10x plus lent|
 
 ### <a name="route"></a> Panne de robotaxi
