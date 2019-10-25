@@ -35,7 +35,7 @@ Payload :
 |champ|description|
 |---|---|
 |`vehicle_type`|Indique le moyen de transport avec lequel déplacer l'agent. Ce champ peut prendre n'importe quelle valeur spécifiée dans la colonne *code technique* des [moyens de transport](city.md#vehicle_type). Au final la valeur peut rester fixe car elle n'a pas d'incidence sur la téléportation |
-|`path`|doit contenir impérativement un array de deux valeurs, chacune d'entre elle étant un array contenant une position x et y. Le second array contient l'endroit où téléporter l'agent (dans notre cas x = 20.9 et Y=5.6. Le premier array contient la position de destination +/- 0.1 sur x ou sur y |
+|`path`|doit contenir impérativement un array de deux valeurs, chacune d'entre elle étant un array contenant une position x et y. Le premier array contient les coordonnées d'atterrissage de la téléportation et le second array contient l'endroit où téléporter l'agent (dans notre cas x = 20.9 et Y=5.6. Le second array contient la position de destination +/- 0.1 sur x ou sur y. C'est comme si on téléportait sur le premier point et que l'on glissait tout de suite sur le second |
 |`cost`|doit impérativement contenir deux valeurs à 0 (donc à ne pas modifier) |
 
 ### <a name="circulation"></a> Changer les conditions de circulation
