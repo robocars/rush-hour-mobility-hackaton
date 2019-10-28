@@ -1,11 +1,4 @@
 # Schema interactions meaoo - application
 
 
- -------------        ---------------
-|     apis    | <--> |               |
- =============       |               |
-|     evts    |  --> |  application  |  <--> Utilisateur
- =============       |       Ux      |
-|  commandes  |  <-- |               |
- -------------        ---------------
-
+![Cartographie](assets/20191018_tmp_cartographie.png)
