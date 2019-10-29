@@ -1,6 +1,6 @@
 # La MeaooMap
 
-La MeaooMap est l'application qui vous permet de visualier le terrain de jeu dans lequel votre agent va évoluer. Vous pouvez y accéder sur `http://control-tower.[NAMESPACE].xp65.renault-digital.com/` ((remplacez `[NAMESPACE]` par votre identifiant de namespace)).
+La MeaooMap est l'application qui vous permet de visualier le terrain de jeu dans lequel votre agent va évoluer. Vous pouvez y accéder sur `http://control-tower.[NAMESPACE].xp65.renault-digital.com/` (remplacez `[NAMESPACE]` par votre identifiant de namespace).
 
 Elle est matérialisée par la [MeaooCity](city.md) dans l'espace de [démo](demo.md).
 

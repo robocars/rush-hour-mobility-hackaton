@@ -7,7 +7,7 @@ Cette section liste les événements émis par la MeaooMap auxquels vous pouvez 
 ## L'agent
 ### <a name="agent"></a> Agent situation
 
-> **Topic** : `project-65/prod/user/situation`  
+> **Topic** : `[TOPIC_PREFIX]/prod/user/situation`  
 > **Description** : changement de situation de l'agent.
 
 Réponse :
@@ -31,7 +31,7 @@ Réponse :
 ## L'environnement
 ### <a name="weather"></a> Météo
 
-> **Topic** : `project-65/prod/context/change/weather`  
+> **Topic** : `[TOPIC_PREFIX]/prod/context/change/weather`  
 > **Description** : changement de météo.
 
 Payload :
@@ -45,7 +45,7 @@ Payload :
 
 ### <a name="air"></a> Qualité de l'air
 
-> **Topic** : `project-65/prod/context/change/air`  
+> **Topic** : `[TOPIC_PREFIX]/prod/context/change/air`  
 > **Description** : changement de la qualité de l'air.
 
 Payload :
@@ -69,7 +69,7 @@ Les événements incidents entraînent un "freeze" de la ville et du déplacemen
 
 ### <a name="route"></a> Fermeture/ouverture de route
 
-> **Topic** : `project-65/prod/environment/change/roads_status`  
+> **Topic** : `[TOPIC_PREFIX]/prod/environment/change/roads_status`  
 > **Description** : événement concernant les voies dont l'accessibilité vient d'être modifiée pour les robotaxis(car), les vélos (bike) et à pieds (walk). 
 RAPPEL: Le métro est géré à part
 
@@ -150,7 +150,7 @@ Payload :
 
 ### <a name="route"></a> Fermeture/ouverture de ligne de métro
 
-> **Topic** : `project-65/prod/environment/change/lines_state`  
+> **Topic** : `[TOPIC_PREFIX]/prod/environment/change/lines_state`  
 > **Description** : événement concernant l'accessibilité des lignes de métro
 
 Payload :
@@ -183,7 +183,7 @@ Payload :
 
 ### <a name="route"></a> Ralentissement des voies de circulation
 
-> **Topic** : `project-65/prod/environment/change/traffic_conditions`  
+> **Topic** : `[TOPIC_PREFIX]/prod/environment/change/traffic_conditions`  
 > **Description** : événement concernant les voies de ciculation subissant un changement de la fluidité du traffic
 
 Payload :
@@ -216,7 +216,7 @@ Payload :
 
 ### <a name="route"></a> Panne de robotaxi
 
-> **Topic** : `project-65/prod/environment/change/breakdown`  
+> **Topic** : `[TOPIC_PREFIX]/prod/environment/change/breakdown`  
 > **Description** : événement concernant les pannes de robotaxi
 
 Payload :

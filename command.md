@@ -10,7 +10,7 @@ Lors de la démo finale, ou pendant vos tests sur la MeaooCity réelle, ces comm
 ### <a name="reset"></a> Reset
 
 > **Protocol** : MQTT  
-> **Topic** : `project-65/prod/city/reset`  
+> **Topic** : `[TOPIC_PREFIX]/prod/city/reset`  
 > **QoS** : `0`  
 > **Description** : permet de réinitialiser le MeaooTime de l'agent
 
@@ -19,7 +19,7 @@ Payload : vide
 ### <a name="reset"></a> Téléporter l'agent
 
 > **Protocol** : MQTT  
-> **Topic** : `project-65/prod/user/path-to-target`  
+> **Topic** : `[TOPIC_PREFIX]/prod/user/path-to-target`  
 > **QoS** : `0`  
 > **Description** : téléporte l'agent à un endroit de la map. Permet de tester les cas que l'on souhaite
 
@@ -44,7 +44,7 @@ Payload :
 ### <a name="circulation"></a> Changer les conditions de circulation
 
 > **Protocol** : MQTT  
-> **Topic** : `project-65/prod/city/morph/traffic_conditions`  
+> **Topic** : `[TOPIC_PREFIX]/prod/city/morph/traffic_conditions`  
 > **QoS** : `0`  
 > **Description** : modifie les conditions de circulation dans la ville (n'affecte que le déplacement en voiture)
 
@@ -64,7 +64,7 @@ Payload :
 ### <a name="fermerouvrirmetro"></a> Fermer/ouvrir une ligne de métro
 
 > **Protocol** : MQTT  
-> **Topic** : `project-65/prod/city/morph/lines_state`  
+> **Topic** : `[TOPIC_PREFIX]/prod/city/morph/lines_state`  
 > **QoS** : `0`  
 > **Description** : ferme ou ouvre une section de ligne de métro. Les lignes étant bi directionnelle, une statut est valable pour 1 sens de circulation. Il est donc possible de fermer seulement le sens de circulation A->B et pas B->A
 
@@ -84,7 +84,7 @@ Payload :
 ### <a name="fermerouvrirmetro"></a> Fermer/ouvrir une route
 
 > **Protocol** : MQTT  
-> **Topic** : `project-65/prod/city/morph/roads_status`  
+> **Topic** : `[TOPIC_PREFIX]/prod/city/morph/roads_status`  
 > **QoS** : `0`  
 > **Description** : Description ; ferme ou ouvre une route pour un moyen de transport donné. Certains moyens de transport routiers étant bi directionnels, un statut = 1 sens de circulation. Il est donc possible de fermer seulement le sens de circulation A->B et pas B->A
 
@@ -124,7 +124,7 @@ Payload :
 ### <a name="move"></a> Déplacer l'agent
 
 > **Protocol** : MQTT  
-> **Topic** : `project-65/prod/user/path`  
+> **Topic** : `[TOPIC_PREFIX]/prod/user/path`  
 > **QoS** : `0`  
 > **Description** : déplace l'agent depuis sa position courante vers une cible, en utilisant le moyen de transport indiqué <u>et le chemin le plus rapide</u>.
 
