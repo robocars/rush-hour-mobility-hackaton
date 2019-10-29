@@ -542,3 +542,83 @@ Pour le métro:
 > **Description** : permet de supprimer tous les ralentissements et réouvrir toutes les voies de circulation / lignes fermées
 
 **NOTE** : cet appel ne génère pas d'événements de réouverture ou d'événements de retour à la normale des conditions de circulation. 
+
+## <a name="vehicles"></a> Vehicules
+
+> **Base URL** : `http://vehicle.[NAMESPACE].xp65.renault-digital.com`  
+
+> **Description** : Cette API permet de récupérer les informations courantes concernant les robotaxi présents dans la ville.
+
+### Obtention des informations de tous les véhicules
+
+> **Endpoint** : `/api/v1/vehicles`  
+> **Méthode** : `GET`  
+
+> **Description** :  permet de récupérer tous les véhicules présents dans la ville.
+
+Réponse:
+```json
+[
+    {
+        "id": "0000000000000000",
+        "attitude": {
+            "id": null,
+            "position": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "orientation": 0.0,
+            "speed": 0.0
+        },
+        "battery": 64.0,
+        "available": true
+    },
+    { ... }
+]
+```
+
+|champ|description|
+|---|---|
+|`id`|identifiant du robotaxi.|
+|`battery`|pourcentage de batterie restant dans le vehicule.|
+|`available`|état de disponibilité du taxi.|
+|`attitude.id`|non utilisé.|
+|`attitude.position`|positions du véhicule dans le [système de coordonnées de la MeaooCity](city.md#coord).|
+|`attitude.orientation`|orientation du véhicule sur un cercle de 360°. 0 étant au Nord et 90 étant l'Est.|
+|`attitude.speed`|Vitesse du véhicule (exprimée en m/s).|
+
+### Obtention des informations d'un véhicule
+
+
+> **Endpoint** : `/api/v1/vehicles/{id}`  
+> **Méthode** : `GET`  
+
+> **Description** :  permet de récupérer les informations d'un vehicule d'id `{id}`.
+
+Réponse:
+```json
+{
+    "id": "0000000000000000",
+    "attitude": {
+        "id": null,
+        "position": {
+            "x": 0.0,
+            "y": 0.0
+        },
+        "orientation": 0.0,
+        "speed": 0.0
+    },
+    "battery": 64.0,
+    "available": true
+}
+```
+
+|champ|description|
+|---|---|
+|`id`|identifiant du robotaxi.|
+|`battery`|pourcentage de batterie restant dans le vehicule.|
+|`available`|état de disponibilité du taxi.|
+|`attitude.id`|non utilisé.|
+|`attitude.position`|positions du véhicule dans le [système de coordonnées de la MeaooCity](city.md#coord).|
+|`attitude.orientation`|orientation du véhicule sur un cercle de 360°. 0 étant au Nord et 90 étant l'Est.|
+|`attitude.speed`|Vitesse du véhicule (exprimée en m/s).|

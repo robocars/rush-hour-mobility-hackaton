@@ -228,6 +228,41 @@ Payload :
 |---|---|
 |`vehicle`|identifiant du robotaxi concerné par la panne, il n'est donc plus utilisable|
 
+## Les Robotaxi
+
+### <a name="vehicle"></a> Vehicle attitude
+
+> **Topic** : `[TOPIC_PREFIX]/prod/{id}/status/attitude`  
+> **Description** : changement d'attitude du robotaxi `{id}`
+
+Réponse :
+```json
+{
+    "id": "0000000000000000",
+    "attitude": {
+        "id": null,
+        "position": {
+            "x": 0.0,
+            "y": 0.0
+        },
+        "orientation": 0.0,
+        "speed": 0.0
+    },
+    "battery": 64.0,
+    "available": true
+}
+```
+
+|champ|description|
+|---|---|
+|`id`|identifiant du robotaxi.|
+|`battery`|pourcentage de batterie restant dans le vehicule.|
+|`available`|état de disponibilité du taxi.|
+|`attitude.id`|non utilisé.|
+|`attitude.position`|positions du véhicule dans le [système de coordonnées de la MeaooCity](city.md#coord).|
+|`attitude.orientation`|orientation du véhicule sur un cercle de 360°. 0 étant au Nord et 90 étant l'Est.|
+|`attitude.speed`|Vitesse du véhicule (exprimée en m/s).|
+
 
 ## <a name="missionstart"></a> Evénement initial de déclenchement de la mission
 
