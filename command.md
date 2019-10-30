@@ -149,6 +149,8 @@ Payload :
 * La destination est égale à la position courante.
 * Aucun [chemin](graph.md) ne permet d'aller à la cible.
 
+Dans tous les cas, vous pouvez souscrire au topic `[TOPIC_PREFIX]/prod/user/status` qui vous renseigne sur les commandes de déplacement de l'agent. 
+
 ### <a name="stop"></a> Arrêter l'agent en cours de déplacement
 
 > **Protocol** : MQTT  
