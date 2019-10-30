@@ -149,3 +149,16 @@ Payload :
 * La destination est égale à la position courante.
 * Aucun [chemin](graph.md) ne permet d'aller à la cible.
 
+### <a name="stop"></a> Arrêter l'agent en cours de déplacement
+
+> **Protocol** : MQTT  
+> **Topic** : `[TOPIC_PREFIX]/prod/user/stop`  
+> **QoS** : `0`  
+> **Description** : arrête l'agent pendant un déplacement.
+
+Payload : aucun
+
+#### Raisons pour lesquelles la commande pourrait ne pas fonctionner
+
+* La commande n'est pas envoyée sur le bon topic
+* L'agent est en pleine voie dans le métro (auquel cas il s'arrêtera à la prochaine station)
