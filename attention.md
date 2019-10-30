@@ -1,4 +1,4 @@
-# Conseils pour bien réussir son hackaton
+# Conseils pour bien réussir son hackathon
 
 ## Du code portable entre les environnements
 - Vous devrez utiliser plusieurs environnements (dev/demos) avec des identifiants et des points d'accès différents.
@@ -10,3 +10,4 @@
 - Prévoyez les adapateurs nécessaires à vos machines pour se connecter à une prise HDMI
 - Pensez au moyen de présentation à utiliser dès la conception
 
+[< retour](README.md)

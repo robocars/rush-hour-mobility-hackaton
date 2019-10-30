@@ -24,9 +24,9 @@ Réponse :
 
 |champ|description|
 |---|---|
-|`vehicle_type`|Indique le moyen de transport utilisé par l'agent. Ce champ peut prendre n'importe quelle valeur spécifiée dans la colonne *code technique* des [moyens de transport](city.md#vehicle_type) |
-|`position`|Position de l'agent dans le [système de coordonnées de la MeaooCity](city.md#coord)|
-|`total_cost`|Correspond au *MeaooTime*, le temps virtuel passé par l'agent dans les transports. Cette valeur est exprimée en minutes.|
+|`vehicle_type`|Indique le moyen de transport utilisé par l'agent. Ce champ peut prendre n'importe quelle valeur spécifiée dans la colonne *code technique* des [moyens de transport](concepts.md#vehicle_type) |
+|`position`|Position de l'agent dans le [système de coordonnées de la MeaooCity](concepts.md#coord)|
+|`total_cost`|Correspond au [MeaooTime](concepts.md#meaootime), le temps virtuel passé par l'agent dans les transports. Cette valeur est exprimée en minutes.|
 
 ## L'environnement
 ### <a name="weather"></a> Météo
@@ -145,7 +145,7 @@ Payload :
 |`bike`|tableau regroupant les voies "open" et "close" pour les vélos|
 |`walk`|tableau regroupant les voies "open" et "close" pour les déplacements à pieds|
 |`id`|identifiant de la voie de ciculation concernée telle que répertoriée dans l'api graph|
-|`location`|positions dans le [système de coordonnées de la MeaooCity](city.md#coord) des extrémités du segment de ligne concerné|
+|`location`|positions dans le [système de coordonnées de la MeaooCity](concepts.md#coord) des extrémités du segment de ligne concerné|
 |`state`|état de la voie de ciculation concernée (`open` ou `close`)|
 
 ### <a name="route"></a> Fermeture/ouverture de ligne de métro
@@ -178,7 +178,7 @@ Payload :
 |champ|description|
 |---|---|
 |`id`|identifiant du segment de ligne de métro concerné telle que répertoriée dans l'api graph|
-|`location`|positions dans le [système de coordonnées de la MeaooCity](city.md#coord) des extrémités du segment de ligne concerné|
+|`location`|positions dans le [système de coordonnées de la MeaooCity](concepts.md#coord) des extrémités du segment de ligne concerné|
 |`state`|état de la voie de ciculation concernée (`open` ou `close`)|
 
 ### <a name="route"></a> Ralentissement des voies de circulation
@@ -211,7 +211,7 @@ Payload :
 |champ|description|
 |---|---|
 |`id`|identifiant de la voie de ciculation concernée telle que répertoriée dans l'api graph|
-|`location`|positions dans le [système de coordonnées de la MeaooCity](city.md#coord) des extrémités du segment de ligne concerné|
+|`location`|positions dans le [système de coordonnées de la MeaooCity](concepts.md#coord) des extrémités du segment de ligne concerné|
 |`slowing_factor`|facteur de fluidité de la voie de ciculation concernée. Plage de valeurs:[1,10], ce sont des entiers, 1 = traffic fluide, 10 = traffic 10x plus lent|
 
 ### <a name="route"></a> Panne de robotaxi
@@ -259,7 +259,7 @@ Réponse :
 |`battery`|pourcentage de batterie restant dans le vehicule.|
 |`available`|état de disponibilité du taxi.|
 |`attitude.id`|non utilisé.|
-|`attitude.position`|positions du véhicule dans le [système de coordonnées de la MeaooCity](city.md#coord).|
+|`attitude.position`|positions du véhicule dans le [système de coordonnées de la MeaooCity](concepts.md#coord).|
 |`attitude.orientation`|orientation du véhicule sur un cercle de 360°. 0 étant au Nord et 90 étant l'Est.|
 |`attitude.speed`|Vitesse du véhicule (exprimée en m/s).|
 

@@ -5,16 +5,20 @@ This repo contains the documentation needed by a hackathon contender to particip
     - Votre proposition d'expérience utilisateur (Ux) sera idéalement projetée sur les écrans géants mis à disposition lors de la démo finale. Pensez au moyen de présentation à utiliser dès la conception
     - ...
 1. [Votre arrivée, votre salle et vos identifiants](startup.md)
-1. [Votre environnement de dev mobilité - MeaooMap](map.md)
-    - [Les moyens de transport disponibles et le MeaooTime](map.md#vehicle_type)
+1. [Votre terrain de jeu](concepts.md)
+    - [la ville](concepts.md#ville) et son système de [coordonnées](concepts.md#coord)
+    - [Les moyens de transport disponibles](concepts.md#vehicle_type) et le [MeaooTime](concepts.md#meaootime)
+    - [la MeaooMap](concepts.md#map)
+    - [la MeaooCity](concepts.md#city)
+1. Votre environnement de dev mobilité
     - [le contexte météo et pollution actuel](context.md)
-    - [Les APIs Meaoomap](api.md)
     - [Les événements émis par MeaooMap](events.md) 
+    - [Les APIs Meaoomap](api.md)
     - [L'evt spécial de déclenchement de la mission](events.md#missionstart) *A compléter*
-    - [Les commandes - evts vers MeaooMap](command.md) 
+    - [Les commandes](command.md) 
     - Video du fonctionnement de meaooMap *A compléter*
 1. [L'environnement MEAOO complet de démo](demo.md)
-    - Avec en plus [La MeaooCity](city.md), [la MeaooCar](car.md) et les 3 écrans géants de présentation
+    - Avec en plus [La MeaooCity](concepts.md#city), [la MeaooCar](car.md) et les 3 écrans géants de présentation
 1. [La démo finale](demo.md#finale)
 1. [Schéma d'interaction de votre application avec MeaooMap](schema.md) *A compléter*
     - Une image avec toutes les apis, les événements, l'application et l'utilisateur en interaction

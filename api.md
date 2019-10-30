@@ -29,9 +29,9 @@ Réponse :
 
 |champ|description|
 |---|---|
-|`vehicle_type`|Indique le moyen de transport utilisé par l'agent (dernier ou actuel). Ce champ peut prendre n'importe quelle valeur spécifiée dans la colonne *code technique* des [moyens de transport](city.md#vehicle_type) |
-|`position`|Position de l'agent dans le [système de coordonnées de la MeaooCity](city.md#coord)|
-|`total_cost`|Correspond au *MeaooTime*, le temps virtuel passé par l'agent dans les transports. Cette valeur est exprimée en minutes.|
+|`vehicle_type`|Indique le moyen de transport utilisé par l'agent (dernier ou actuel). Ce champ peut prendre n'importe quelle valeur spécifiée dans la colonne *code technique* des [moyens de transport](concepts.md#vehicle_type) |
+|`position`|Position de l'agent dans le [système de coordonnées de la MeaooCity](concepts.md#coord)|
+|`total_cost`|Correspond au [MeaooTime](concepts.md#meaootime), le temps virtuel passé par l'agent dans les transports. Cette valeur est exprimée en minutes.|
 
 ## <a name="context"></a> Context
 
@@ -93,8 +93,8 @@ Ces 3 fichiers ont la même structure:
 
 |champ|description|
 |---|---|
-|`start`|point sur la carte représentant l'extrémité A d'un segment dans le [système de coordonnées de la MeaooCity](city.md#coord)|
-|`neighbors`| tableau de points  dans le [système de coordonnées de la MeaooCity](city.md#coord) représentant la ou les extrémités d'un ou plusieurs segment ayant pour origine le point A|
+|`start`|point sur la carte représentant l'extrémité A d'un segment dans le [système de coordonnées de la MeaooCity](concepts.md#coord)|
+|`neighbors`| tableau de points  dans le [système de coordonnées de la MeaooCity](concepts.md#coord) représentant la ou les extrémités d'un ou plusieurs segment ayant pour origine le point A|
 
 Exemple:
 ```json
@@ -131,8 +131,8 @@ Payload :
 
 |champ|description|
 |---|---|
-|`departure`|Position de départ (dans le [système de coordonnées de la MeaooCity](city.md#coord)) du trajet à calculer.|
-|`arrival`|Position d'arrivée (dans le [système de coordonnées de la MeaooCity](city.md#coord)) du trajet à calculer.|
+|`departure`|Position de départ (dans le [système de coordonnées de la MeaooCity](concepts.md#coord)) du trajet à calculer.|
+|`arrival`|Position d'arrivée (dans le [système de coordonnées de la MeaooCity](concepts.md#coord)) du trajet à calculer.|
 
 Réponse:
 ```json
@@ -168,9 +168,9 @@ Remarque: le membre `cars` de la réponse est un héritage, nous devrions retrou
 |champ|description|
 |---|---|
 |`id`|Moyen de transport qui a été calculé.|
-|`paths`|coordonnées (dans le [système de coordonnées de la MeaooCity](city.md#coord)) des points composant le chemin identifié par l'api comme étant le plus optimal. Ces coordonnées sont exprimées dans un tableau dont l'indice `0` est la composante `x` et l'indice `1` est la composante  `y`.|
-|`costs`|MeaooTime associé aux segments du `paths`|
-|`path_length`|MeaooTime complet du déplacement sur le paths (égal à la somme des `costs`)|
+|`paths`|coordonnées (dans le [système de coordonnées de la MeaooCity](concepts.md#coord)) des points composant le chemin identifié par l'api comme étant le plus optimal. Ces coordonnées sont exprimées dans un tableau dont l'indice `0` est la composante `x` et l'indice `1` est la composante  `y`.|
+|`costs`|[MeaooTime](concepts.md#meaootime) associé aux segments du `paths`|
+|`path_length`|[MeaooTime](concepts.md#meaootime) complet du déplacement sur le paths (égal à la somme des `costs`)|
 
 ### <a name="cout_metro"></a> Calcul de coût pour un trajet en métro
 
@@ -190,8 +190,8 @@ Payload :
 
 |champ|description|
 |---|---|
-|`departure`|Position de départ (dans le [système de coordonnées de la MeaooCity](city.md#coord)) du trajet à calculer.|
-|`arrival`|Position d'arrivée (dans le [système de coordonnées de la MeaooCity](city.md#coord)) du trajet à calculer.|
+|`departure`|Position de départ (dans le [système de coordonnées de la MeaooCity](concepts.md#coord)) du trajet à calculer.|
+|`arrival`|Position d'arrivée (dans le [système de coordonnées de la MeaooCity](concepts.md#coord)) du trajet à calculer.|
 
 Réponse:
 ```json
@@ -227,9 +227,9 @@ Remarque: le membre `cars` de la réponse est un héritage, nous devrions retrou
 |champ|description|
 |---|---|
 |`id`|Moyen de transport qui a été calculé.|
-|`paths`|coordonnées (dans le [système de coordonnées de la MeaooCity](city.md#coord)) des points composant le chemin identifié par l'api comme étant le plus optimal. Ces coordonnées sont exprimées dans un tableau dont l'indice `0` est la composante `x` et l'indice `1` est la composante  `y`.|
-|`costs`|MeaooTime associé aux segments du `paths`|
-|`path_length`|MeaooTime complet du déplacement sur le paths (égal à la somme des `costs`)|
+|`paths`|coordonnées (dans le [système de coordonnées de la MeaooCity](concepts.md#coord)) des points composant le chemin identifié par l'api comme étant le plus optimal. Ces coordonnées sont exprimées dans un tableau dont l'indice `0` est la composante `x` et l'indice `1` est la composante  `y`.|
+|`costs`|[MeaooTime](concepts.md#meaootime) associé aux segments du `paths`|
+|`path_length`|[MeaooTime](concepts.md#meaootime) complet du déplacement sur le paths (égal à la somme des `costs`)|
 
 ### <a name="cout_metro"></a> Calcul de coût pour un trajet à pieds
 
@@ -249,8 +249,8 @@ Payload :
 
 |champ|description|
 |---|---|
-|`departure`|Position de départ (dans le [système de coordonnées de la MeaooCity](city.md#coord)) du trajet à calculer.|
-|`arrival`|Position d'arrivée (dans le [système de coordonnées de la MeaooCity](city.md#coord)) du trajet à calculer.|
+|`departure`|Position de départ (dans le [système de coordonnées de la MeaooCity](concepts.md#coord)) du trajet à calculer.|
+|`arrival`|Position d'arrivée (dans le [système de coordonnées de la MeaooCity](concepts.md#coord)) du trajet à calculer.|
 
 Réponse:
 ```json
@@ -286,9 +286,9 @@ Remarque: le membre `cars` de la réponse est un héritage, nous devrions retrou
 |champ|description|
 |---|---|
 |`id`|Moyen de transport qui a été calculé.|
-|`paths`|coordonnées (dans le [système de coordonnées de la MeaooCity](city.md#coord)) des points composant le chemin identifié par l'api comme étant le plus optimal. Ces coordonnées sont exprimées dans un tableau dont l'indice `0` est la composante `x` et l'indice `1` est la composante  `y`.|
-|`costs`|MeaooTime associé aux segments du `paths`|
-|`path_length`|MeaooTime complet du déplacement sur le paths (égal à la somme des `costs`)|
+|`paths`|coordonnées (dans le [système de coordonnées de la MeaooCity](concepts.md#coord)) des points composant le chemin identifié par l'api comme étant le plus optimal. Ces coordonnées sont exprimées dans un tableau dont l'indice `0` est la composante `x` et l'indice `1` est la composante  `y`.|
+|`costs`|[MeaooTime](concepts.md#meaootime) associé aux segments du `paths`|
+|`path_length`|[MeaooTime](concepts.md#meaootime) complet du déplacement sur le paths (égal à la somme des `costs`)|
 
 ### <a name="cout_metro"></a> Calcul de coût pour un trajet en voiture
 
@@ -317,9 +317,9 @@ Payload :
 
 |champ|description|
 |---|---|
-|`departure`|Position de départ (dans le [système de coordonnées de la MeaooCity](city.md#coord)) du trajet à calculer.|
-|`arrival`|Position d'arrivée (dans le [système de coordonnées de la MeaooCity](city.md#coord)) du trajet à calculer.|
-|`vehicles`|liste de positions (dans le [système de coordonnées de la MeaooCity](city.md#coord)) permettant de simuler le trajet d'un robotaxi en approche de `departure`.|
+|`departure`|Position de départ (dans le [système de coordonnées de la MeaooCity](concepts.md#coord)) du trajet à calculer.|
+|`arrival`|Position d'arrivée (dans le [système de coordonnées de la MeaooCity](concepts.md#coord)) du trajet à calculer.|
+|`vehicles`|liste de positions (dans le [système de coordonnées de la MeaooCity](concepts.md#coord)) permettant de simuler le trajet d'un robotaxi en approche de `departure`.|
 |`vehicles.id`|identifiant de corrélation permettant d'associer les éléments de la réponse aux données passées dans l'appel.|
 
 
@@ -385,9 +385,9 @@ Remarque: le membre *cars* de la réponse est un héritage, nous devrions retrou
 |champ|description|
 |---|---|
 |`id`|Id de corrélation correspondant à la position qui a été donnée dans le payload de l'appel.|
-|`paths`|coordonnées (dans le [système de coordonnées de la MeaooCity](city.md#coord)) des points composant le chemin identifié par l'api comme étant le plus optimal. Ces coordonnées sont exprimées dans un tableau dont l'indice `0` est la composante `x` et l'indice `1` est la composante  `y`.|
-|`costs`|MeaooTime associé aux segments du `paths`|
-|`path_length`|MeaooTime complet du déplacement sur le paths (égal à la somme des `costs`)|
+|`paths`|coordonnées (dans le [système de coordonnées de la MeaooCity](concepts.md#coord)) des points composant le chemin identifié par l'api comme étant le plus optimal. Ces coordonnées sont exprimées dans un tableau dont l'indice `0` est la composante `x` et l'indice `1` est la composante  `y`.|
+|`costs`|[MeaooTime](concepts.md#meaootime) associé aux segments du `paths`|
+|`path_length`|[MeaooTime](concepts.md#meaootime) complet du déplacement sur le paths (égal à la somme des `costs`)|
 
 ### <a name="liste_metro"></a> obtenir la liste des stations de métro
 
@@ -437,7 +437,7 @@ Réponse:
 |champ|description|
 |---|---|
 |`id`|identifiant de la voie de ciculation concernée telle que répertoriée dans l'api graph|
-|`location`|positions dans le [système de coordonnées de la MeaooCity](city.md#coord) des extrémités du segment de ligne concerné|
+|`location`|positions dans le [système de coordonnées de la MeaooCity](concepts.md#coord) des extrémités du segment de ligne concerné|
 |`slowing_factor`|facteur de fluidité de la voie de ciculation concernée. Plage de valeurs:[1,10], ce sont des entiers, 1 = traffic fluide, 10 = traffic 10x plus lent|
 
 
@@ -481,7 +481,7 @@ Réponse:
 |champ|description|
 |---|---|
 |`id`|identifiant de la voie de ciculation concernée telle que répertoriée dans l'api graph|
-|`location`|positions dans le [système de coordonnées de la MeaooCity](city.md#coord) des extrémités du segment de ligne concerné|
+|`location`|positions dans le [système de coordonnées de la MeaooCity](concepts.md#coord) des extrémités du segment de ligne concerné|
 |`state`|état de la voie de ciculation concernée.|
 
 ### <a name="lignes_de_metro_fermees"></a> obtenir les lignes de métro actuellement fermées 
@@ -516,7 +516,7 @@ Réponse:
 |champ|description|
 |---|---|
 |`id`|identifiant du segment de ligne de métro concerné telle que répertoriée dans l'api graph|
-|`location`|positions dans le [système de coordonnées de la MeaooCity](city.md#coord) des extrémités du segment de ligne concerné|
+|`location`|positions dans le [système de coordonnées de la MeaooCity](concepts.md#coord) des extrémités du segment de ligne concerné|
 |`state`|état de la voie de ciculation concernée.|
 
 ## <a name="dev_apis"></a> Dev environment specific apis
@@ -583,7 +583,7 @@ Réponse:
 |`battery`|pourcentage de batterie restant dans le vehicule.|
 |`available`|état de disponibilité du taxi.|
 |`attitude.id`|non utilisé.|
-|`attitude.position`|positions du véhicule dans le [système de coordonnées de la MeaooCity](city.md#coord).|
+|`attitude.position`|positions du véhicule dans le [système de coordonnées de la MeaooCity](concepts.md#coord).|
 |`attitude.orientation`|orientation du véhicule sur un cercle de 360°. 0 étant au Nord et 90 étant l'Est.|
 |`attitude.speed`|Vitesse du véhicule (exprimée en m/s).|
 
@@ -619,6 +619,6 @@ Réponse:
 |`battery`|pourcentage de batterie restant dans le vehicule.|
 |`available`|état de disponibilité du taxi.|
 |`attitude.id`|non utilisé.|
-|`attitude.position`|positions du véhicule dans le [système de coordonnées de la MeaooCity](city.md#coord).|
+|`attitude.position`|positions du véhicule dans le [système de coordonnées de la MeaooCity](concepts.md#coord).|
 |`attitude.orientation`|orientation du véhicule sur un cercle de 360°. 0 étant au Nord et 90 étant l'Est.|
 |`attitude.speed`|Vitesse du véhicule (exprimée en m/s).|

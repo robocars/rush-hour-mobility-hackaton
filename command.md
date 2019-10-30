@@ -16,7 +16,7 @@ Lors de la démo finale, ou pendant vos tests sur la MeaooCity réelle, ces comm
 
 Payload : vide
 
-### <a name="reset"></a> Téléporter l'agent
+### <a name="teleport"></a> Téléporter l'agent
 
 > **Protocol** : MQTT  
 > **Topic** : `[TOPIC_PREFIX]/prod/user/path-to-target`  
@@ -37,7 +37,7 @@ Payload :
 
 |champ|description|
 |---|---|
-|`vehicle_type`|Indique le moyen de transport avec lequel déplacer l'agent. Ce champ peut prendre n'importe quelle valeur spécifiée dans la colonne *code technique* des [moyens de transport](city.md#vehicle_type). Au final la valeur peut rester fixe car elle n'a pas d'incidence sur la téléportation |
+|`vehicle_type`|Indique le moyen de transport avec lequel déplacer l'agent. Ce champ peut prendre n'importe quelle valeur spécifiée dans la colonne *code technique* des [moyens de transport](concepts.md#vehicle_type). Au final la valeur peut rester fixe car elle n'a pas d'incidence sur la téléportation |
 |`path`|doit contenir impérativement un array de deux valeurs, chacune d'entre elle étant un array contenant une position x et y. Le second array contient l'endroit où téléporter l'agent (dans notre cas x=20.9 et Y=5.6. Le premier array est la même position décalée de +/- 0.1 sur x ou sur y |
 |`cost`|doit impérativement contenir deux valeurs à 0 (donc à ne pas modifier) |
 
@@ -138,14 +138,14 @@ Payload :
 
 |champ|description|
 |---|---|
-|`vehicle_type`|Indique le moyen de transport avec lequel déplacer l'agent. Ce champ peut prendre n'importe quelle valeur spécifiée dans la colonne *code technique* des [moyens de transport](city.md#vehicle_type) |
-|`target`|Position cible vers laquelle déplacer l'agent (exprimée dans le [système de coordonnées de la MeaooCity](city.md#coord)). Si la cible n'est pas sur une route ou sur une ligne de métro, le système trouve de lui-même le carrefour ou la station de métro la plus proche et l'utilise comme cible.|
+|`vehicle_type`|Indique le moyen de transport avec lequel déplacer l'agent. Ce champ peut prendre n'importe quelle valeur spécifiée dans la colonne *code technique* des [moyens de transport](concepts.md#vehicle_type) |
+|`target`|Position cible vers laquelle déplacer l'agent (exprimée dans le [système de coordonnées de la MeaooCity](concepts.md#coord)). Si la cible n'est pas sur une route ou sur une ligne de métro, le système trouve de lui-même le carrefour ou la station de métro la plus proche et l'utilise comme cible.|
 
 #### Raisons pour lesquelles la commande pourrait ne pas fonctionner
 
 * La commande n'est pas envoyée sur le bon topic
 * Le payload n'est pas bien formatté.
-* Les [règles de changement de transport](city.md#vehicle_type) ne sont pas respectées.
+* Les [règles de changement de transport](concepts.md#vehicle_type) ne sont pas respectées.
 * La destination est égale à la position courante.
 * Aucun [chemin](graph.md) ne permet d'aller à la cible.
 
