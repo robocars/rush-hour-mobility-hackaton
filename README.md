@@ -14,7 +14,7 @@ This repo contains the documentation needed by a hackathon contender to particip
     - [le contexte météo et pollution actuel](context.md)
     - [Les événements émis par MeaooMap](events.md) 
     - [Les APIs Meaoomap](api.md)
-    - [L'evt spécial de déclenchement de la mission](events.md#missionstart) *A compléter*
+    - [L'evt spécial de déclenchement de la mission](events.md#missionstart)
     - [Les commandes](command.md) 
     - Video du fonctionnement de meaooMap *A compléter*
 1. [L'environnement MEAOO complet de démo](demo.md)

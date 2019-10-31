@@ -266,5 +266,24 @@ Réponse :
 
 ## <a name="missionstart"></a> Evénement initial de déclenchement de la mission
 
-*A faire*
+> **Topic** : `[TOPIC_PREFIX]/prod/user/mission`  
+> **Description** : événement qui donne la mission de l'agent. Il s'agit de l'événement de départ du scénario de démo de votre application.
 
+Réponse :
+```json
+{
+    "mission": "Votre mission, si vous l'acceptez, consiste à passer par l'ensemble des points ci dessous.",
+    "positions": [
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        ...
+    ]
+}
+```
+
+|champ|description|
+|---|---|
+|`mission`|Message décrivant sa mission à l'agent.|
+|`positions`|Ensemble de positions (dans le [système de coordonnées de la MeaooCity](concepts.md#coord)) que l'agent doit atteindre dans l'ordre. L'indice zéro du tableau contient la position initiale de l'agent. Le dernier élément du tableau est sa destination finale. Tous les points intermédiaires doivent être franchis par l'agent.|
