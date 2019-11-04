@@ -141,6 +141,17 @@ Payload :
 |`vehicle_type`|Indique le moyen de transport avec lequel déplacer l'agent. Ce champ peut prendre n'importe quelle valeur spécifiée dans la colonne *code technique* des [moyens de transport](concepts.md#vehicle_type) |
 |`target`|Position cible vers laquelle déplacer l'agent (exprimée dans le [système de coordonnées de la MeaooCity](concepts.md#coord)). Si la cible n'est pas sur une route ou sur une ligne de métro, le système trouve de lui-même le carrefour ou la station de métro la plus proche et l'utilise comme cible.|
 
+#### Cas particulier du RoboTaxi (vehicle_type=car)
+
+Le robotaxi est le seul moyen de transport que vous pouvez déplacer lorsque vous n'êtes pas à son bord. 
+
+Comment ça marche ?
+
+* Si la position de votre agent correspond à la position d'un RoboTaxi, la commande de déplacement `vehicle_type=car` sera considérée comme une demande de déplacement de l'agent avec le robotaxi.
+* Si la position de votre agent ne correspond pas à la position d'un RoboTaxi, la commande de déplacement `vehicle_type=car` déplacera un RoboTaxi (vide) vers `target`.
+
+Cette mécanique permet d'appeler un RoboTaxi à un point de pickup défini et en même temps de déplacer votre agent vers ce point de pickup (pour gagner du temps par exemple, comme lorsque vous demandez à votre Uber de venir vous chercher au carrefour le plus proche plutôt qu'au pied de votre immeuble pour lui éviter les petites rues)
+
 #### Raisons pour lesquelles la commande pourrait ne pas fonctionner
 
 * La commande n'est pas envoyée sur le bon topic
