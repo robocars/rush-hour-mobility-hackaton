@@ -152,6 +152,20 @@ Comment ça marche ?
 
 Cette mécanique permet d'appeler un RoboTaxi à un point de pickup défini et en même temps de déplacer votre agent vers ce point de pickup (pour gagner du temps par exemple, comme lorsque vous demandez à votre Uber de venir vous chercher au carrefour le plus proche plutôt qu'au pied de votre immeuble pour lui éviter les petites rues)
 
+Exemple :
+
+```java
+// déplace l'agent vers une cible et déplace une voiture vers la même cible
+publish '{"vehicle_type": "bike","target": {"x": 21.8, "y": 4.0}}' to '$TOPIC_PREFIX/prod/user/path'
+publish '{"vehicle_type": "car","target": {"x": 21.8, "y": 4.0}}' to '$TOPIC_PREFIX/prod/user/path'
+
+// attendre que l'agent et la voiture aient atteint la cible 
+...
+
+// déplacer l'agent (en voiture) vers une nouvelle cible
+publish '{"vehicle_type": "car","target": {"x": 14., "y": 2.0}}' to '$TOPIC_PREFIX/prod/user/path'
+```
+
 #### Raisons pour lesquelles la commande pourrait ne pas fonctionner
 
 * La commande n'est pas envoyée sur le bon topic
