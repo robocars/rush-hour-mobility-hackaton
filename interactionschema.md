@@ -69,6 +69,8 @@
                 Solace bus address<br />
                 <ul>
                     <li>[TOPIC_PREFIX]/prod/user/situation​</li>
+                    <li>[TOPIC_PREFIX]/prod/user/mission</li>
+                    <li>[TOPIC_PREFIX]/prod/user/objective-reached</li>
                 </ul>
                 CONTEXT​<br />
                 Solace bus address<br />

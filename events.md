@@ -28,6 +28,24 @@ Réponse :
 |`position`|Position de l'agent dans le [système de coordonnées de la MeaooCity](concepts.md#coord)|
 |`total_cost`|Correspond au [MeaooTime](concepts.md#meaootime), le temps virtuel passé par l'agent dans les transports. Cette valeur est exprimée en minutes.|
 
+### <a name="objective"></a> Objective Reached
+
+> **Topic** : `[TOPIC_PREFIX]/prod/user/objective-reached`  
+> **Description** : L'agent a atteint un objectif de sa [mission](interactionschema.md#missionstart).
+
+Réponse :
+```json
+{
+    "x": 3.024000000000001,
+    "y": 2
+}
+```
+
+|champ|description|
+|---|---|
+|`x`|Les coordonnées en x de l'objectif atteint |
+|`y`|Les coordonnées en y de l'objectif atteint|
+
 ## L'environnement
 ### <a name="weather"></a> Météo
 
