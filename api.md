@@ -74,6 +74,33 @@ Réponse :
 
 > **Base URL** : `http://graph.[NAMESPACE].xp65.renault-digital.com`  
 
+### <a name="fichiers_graph"></a> Fichiers de graphe de la ville
+
+4 fichiers json décrivent le graphe de circulation de la ville:
+- `/processed/v2/bike.json ` contient les informations de circulation des vélos
+- `/processed/v2/vehicule.json ` contient les informations de circulation des voitures
+- `/processed/v2/walk.json ` contient les informations de circulation des piétons
+- `/processed/v2/subway.json ` contient les informations de circulation des métros
+
+Ces fichiers sont au format JSON Cytoscape
+
+```json
+{
+    "elements":{
+        "nodes":[],
+        "edges":[]
+    }
+}
+```
+
+|champ|description|
+|---|---|
+|`nodes`|intersections dans la ville. Dans le cas particulier du métro, les nodes sont également des stations de métro. Attention dans ces fichiers, les positions sont exprimées en milimètres, alors que l'écosystème Meaoo a pour unité de mesure le mètre.|
+|`edges`|routes reliant les intersections. Ces routes sont dirigées, c'est à dire qu'elles correspondent à un sens de circulation seulement. Il est donc possible d'avoir un ou deux edges entre deux nodes A et B s'il s'agit ou non d'un sens unique. Le champ `id` des objets de ce tableau peut vous intéresser pour fermer ou ouvrir des routes avec nos APIs de dev.|
+
+> **ASTUCE** : vous pouvez avoir une représentation graphique de ces fichiers en utilisant [Graphy](https://lukaszkostrzewa.github.io/#)
+
+
 ### <a name="fichiers_voies"></a> Fichiers de description des voies de circulation
 
 3 fichiers json décrivent les voies de ciculation de la ville:
