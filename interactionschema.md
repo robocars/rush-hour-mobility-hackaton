@@ -39,6 +39,10 @@
                 CITY GRAPH​<br />
                 http://graph.[NAMESPACE].xp65.renault-digital.com<br />
                 <ul>
+                    <li>processed/v2/vehicule.json​</li>
+                    <li>processed/v2/bike.json​</li>
+                    <li>processed/v2/walk.json​</li>
+                    <li>processed/v2/subway.json​</li>
                     <li>processed/v2/neighbours.json​</li>
                     <li>processed/v2/subway_neighbours.json​</li>
                     <li>processed/v2/walk_neighbours.json​</li>

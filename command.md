@@ -58,7 +58,7 @@ Payload :
 
 |champ|description|
 |---|---|
-|`road`|identifiant du segment de route sur lequel appliquer le niveau de fluidité souhaité du traffic|
+|`road`|identifiant du segment de route sur lequel appliquer le niveau de fluidité souhaité du traffic. Ce champ correspond aux `id` des `edges` des [fichiers de graphe de la ville](api.md#fichiers_graph).|
 |`slowing_factor`|facteur de fluidité de la voie de ciculation concernée. Plage de valeurs:[1,10], ce sont des entiers, 1 = traffic fluide, 10 = traffic 10x plus lent|
 
 ### <a name="fermerouvrirmetro"></a> Fermer/ouvrir une ligne de métro
@@ -78,7 +78,7 @@ Payload :
 
 |champ|description|
 |---|---|
-|`line`|identifiant du segment de route sur lequel appliquer l'état indiqué dans "state"|
+|`line`|identifiant du segment de route sur lequel appliquer l'état indiqué dans "state". Ce champ correspond aux `id` des `edges` des [fichiers de graphe de la ville](api.md#fichiers_graph).|
 |`state`|`close` ou `open`|
 
 ### <a name="fermerouvrirmetro"></a> Fermer/ouvrir une route
