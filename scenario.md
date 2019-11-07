@@ -4,8 +4,7 @@
 
 - Votre objectif est de proposer une app offrant aux agents la meilleure Ux pour remplir leurs missions et ainsi d'obtenir le label convoité de "Special Ops App" 
 
-- Pour vous aider dans votre tâche un écosystème dernière génération de prototypage de services de mobilité est mis à votre disposition. 
-Il s'agit de MEAOO qui a été spécialement conçu pour l'occasion avec passion par RD ;-)
+- Pour vous aider dans votre tâche un écosystème dernière génération de prototypage de services de mobilité est mis à votre disposition. Il s'agit de MEAOO qui a été spécialement conçu pour l'occasion avec passion par RD ;-)
 
 # Le challenge de votre application
 
@@ -22,4 +21,8 @@ Mission de l'agent : Récupérer le dossier au ministère de l'intérieur et l'a
 
 Votre application permetta-t-elle à l'agent de faire face aux imprévus extrêmes auxquels il sera confronté tout en offrant la meilleure UX de mobilité possible?
 
+## Le déroulement des événements
 
+1. Votre application reçoit un événement [Mission](events.md#missionstart)
+1. Votre application propose les meilleurs moyens de transports pour passer par toutes les positions contenues dans l'événement. au travers de la meilleure UX possible et valide les choix de l'utilisateur au travers de la [commande de déplacement](command.md#move).
+1. Votre application réagit aux différents [incidents](events.md#incident) qui surviennent.

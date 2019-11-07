@@ -20,7 +20,6 @@ This repo contains the documentation needed by a hackathon contender to particip
 1. [L'environnement MEAOO complet de démo](demo.md)
     - Avec en plus [La MeaooCity](concepts.md#city), [la MeaooCar](car.md) et les 3 écrans géants de présentation
 1. [La démo finale](demo.md#finale)
-1. [Schéma d'interaction de votre application avec MeaooMap](schema.md) *A compléter*
-    - Une image avec toutes les apis, les événements, l'application et l'utilisateur en interaction
-1. [Rappel du scénario](scenario.md) *A compléter*
+1. [Cheatsheet d'interaction de votre application avec MeaooMap](interactionschema.md)
+1. [Rappel du scénario](scenario.md)
 
