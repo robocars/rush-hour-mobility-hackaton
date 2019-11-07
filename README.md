@@ -16,7 +16,6 @@ This repo contains the documentation needed by a hackathon contender to particip
     - [Les APIs Meaoomap](api.md)
     - [L'evt spécial de déclenchement de la mission](events.md#missionstart)
     - [Les commandes](command.md) 
-    - Video du fonctionnement de meaooMap *A compléter*
 1. [L'environnement MEAOO complet de démo](demo.md)
     - Avec en plus [La MeaooCity](concepts.md#city), [la MeaooCar](car.md) et les 3 écrans géants de présentation
 1. [La démo finale](demo.md#finale)
