@@ -519,30 +519,6 @@ Réponse:
 |`location`|positions dans le [système de coordonnées de la MeaooCity](concepts.md#coord) des extrémités du segment de ligne concerné|
 |`state`|état de la voie de ciculation concernée.|
 
-## <a name="dev_apis"></a> Dev environment specific apis
-
-## <a name="reset_circulation"></a> Reset des voies de circulation
-
-Pour les robotaxis:
-> **Endpoint** : `/road_graph/reset_graph/car`  
-> **Méthode** : `POST`  
-
-Pour les vélos:
-> **Endpoint** : `/road_graph/reset_graph/bike`  
-> **Méthode** : `POST`  
-
-Pour les déplacement à pieds:
-> **Endpoint** : `/road_graph/reset_graph/walk`  
-> **Méthode** : `POST`  
-
-Pour le métro:
-> **Endpoint** : `/road_graph/reset_graph/subway`  
-> **Méthode** : `POST`  
-
-> **Description** : permet de supprimer tous les ralentissements et réouvrir toutes les voies de circulation / lignes fermées
-
-**NOTE** : cet appel ne génère pas d'événements de réouverture ou d'événements de retour à la normale des conditions de circulation. 
-
 ## <a name="vehicles"></a> Vehicules
 
 > **Base URL** : `http://vehicle.[NAMESPACE].xp65.renault-digital.com`  
@@ -589,7 +565,6 @@ Réponse:
 
 ### Obtention des informations d'un véhicule
 
-
 > **Endpoint** : `/api/v1/vehicles/{id}`  
 > **Méthode** : `GET`  
 
@@ -622,3 +597,30 @@ Réponse:
 |`attitude.position`|positions du véhicule dans le [système de coordonnées de la MeaooCity](concepts.md#coord).|
 |`attitude.orientation`|orientation du véhicule sur un cercle de 360°. 0 étant au Nord et 90 étant l'Est.|
 |`attitude.speed`|Vitesse du véhicule (exprimée en m/s).|
+
+## <a name="dev_apis"></a> Dev environment specific apis
+
+Ces APIs ne sont disponibles que sur votre environnement de développement. Elle ne sont pas utilisable lors de la démo.
+
+### <a name="reset_circulation"></a> Reset des voies de circulation
+
+Pour les robotaxis:
+> **Endpoint** : `/road_graph/reset_graph/car`  
+> **Méthode** : `POST`  
+
+Pour les vélos:
+> **Endpoint** : `/road_graph/reset_graph/bike`  
+> **Méthode** : `POST`  
+
+Pour les déplacement à pieds:
+> **Endpoint** : `/road_graph/reset_graph/walk`  
+> **Méthode** : `POST`  
+
+Pour le métro:
+> **Endpoint** : `/road_graph/reset_graph/subway`  
+> **Méthode** : `POST`  
+
+> **Description** : permet de supprimer tous les ralentissements et réouvrir toutes les voies de circulation / lignes fermées
+
+**NOTE** : cet appel ne génère pas d'événements de réouverture ou d'événements de retour à la normale des conditions de circulation. 
+
