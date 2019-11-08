@@ -32,6 +32,8 @@ Votre identifiant de namespace vous permettra de vous connecter aux différentes
 
 Un broker de messages est associé à environnement. Vous avez besoin des informations de connexion pour vous abonner ou pour publier sur les différents topics (existants ou que vous aller créer), ainsi qu'un préfixe qui servira de root à vos topics.
 
+Si vous souhaitez utiliser le broker de messages pour publier sur vos propres topics, vous deverez absolument les publier sous l'arborescence `[TOPIC_PREFIX]/myteam/...`
+
 ### Le réseau Wifi
 
 Nous mettons à votre disposition un réseau wifi si vous en avez besoin. La connexion internet derrière ce réseau est une connexion 4G à partager avec l'ensemble des participants.
