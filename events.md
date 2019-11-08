@@ -28,6 +28,24 @@ Réponse :
 |`position`|Position de l'agent dans le [système de coordonnées de la MeaooCity](concepts.md#coord)|
 |`total_cost`|Correspond au [MeaooTime](concepts.md#meaootime), le temps virtuel passé par l'agent dans les transports. Cette valeur est exprimée en minutes.|
 
+### <a name="objective"></a> Agent Status
+
+> **Topic** : `[TOPIC_PREFIX]/prod/user/status`  
+> **Description** : Renseigne sur le statut des [commandes](command.md#move) de l'agent.
+
+Réponse :
+```json
+{
+    "status": ...,
+    "situation": ...
+}
+```
+
+|champ|description|
+|---|---|
+|`status`|Prends la valeur `moving` si l'agent commence un déplacement.<br/>Prends la valeur `Stopping` si l'agent amorce un arrêt.<br/>Prends la valeur `Stopped` si l'agent s'arrête. |
+|`situation`|Correspond à la situation de l'agent au moment où l'événement est levé.|
+
 ### <a name="objective"></a> Objective Reached
 
 > **Topic** : `[TOPIC_PREFIX]/prod/user/objective-reached`  
