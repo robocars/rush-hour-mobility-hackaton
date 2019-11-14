@@ -36,8 +36,15 @@ Réponse :
 Réponse :
 ```json
 {
-    "status": ...,
-    "situation": ...
+    "status": "moving",
+    "situation": {
+                   "vehicle_type": "bike",
+                   "position": {
+                      "x": 3.024000000000001,
+                      "y": 2
+                    },
+                   "total_cost": 95.83786949752295
+                 }
 }
 ```
 
