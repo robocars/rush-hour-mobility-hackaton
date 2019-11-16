@@ -77,10 +77,10 @@ Réponse :
 ### <a name="fichiers_graph"></a> Fichiers de graphe de la ville
 
 4 fichiers json décrivent le graphe de circulation de la ville:
-- `/processed/v2/bike.json ` contient les informations de circulation des vélos
-- `/processed/v2/vehicule.json ` contient les informations de circulation des voitures
-- `/processed/v2/walk.json ` contient les informations de circulation des piétons
-- `/processed/v2/subway.json ` contient les informations de circulation des métros
+- `/processed/bike.json ` contient les informations de circulation des vélos
+- `/processed/vehicule.json ` contient les informations de circulation des voitures
+- `/processed/walk.json ` contient les informations de circulation des piétons
+- `/processed/subway.json ` contient les informations de circulation des métros
 
 Ces fichiers sont au format JSON Cytoscape
 
@@ -104,9 +104,9 @@ Ces fichiers sont au format JSON Cytoscape
 ### <a name="fichiers_voies"></a> Fichiers de description des voies de circulation
 
 3 fichiers json décrivent les voies de ciculation de la ville:
-- `/processed/v2/neighbours.json ` contient des informations permettant de dessiner les routes (pour les voitures)
-- `/processed/v2/subway_neighbours.json` contient des informations permettant de dessiner les lignes de métro
-- `/processed/v2/walk_neighbours.json` contient des informations permettant de dessiner les chemins piétonniers
+- `/processed/neighbours.json ` contient des informations permettant de dessiner les routes (pour les voitures)
+- `/processed/subway_neighbours.json` contient des informations permettant de dessiner les lignes de métro
+- `/processed/walk_neighbours.json` contient des informations permettant de dessiner les chemins piétonniers
 
 Ces 3 fichiers ont la même structure:
 ```json
