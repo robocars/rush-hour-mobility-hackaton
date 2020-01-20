@@ -7,7 +7,7 @@ Cette section liste les événements émis par la MeaooMap auxquels vous pouvez 
 ## L'agent
 ### <a name="agent"></a> Agent situation
 
-> **Topic** : `[TOPIC_PREFIX]/prod/user/situation`  
+> **Topic** : `[ENVIRONMENT]/prod/user/situation`  
 > **Description** : changement de situation de l'agent.
 
 Réponse :
@@ -30,7 +30,7 @@ Réponse :
 
 ### <a name="objective"></a> Agent Status
 
-> **Topic** : `[TOPIC_PREFIX]/prod/user/status`  
+> **Topic** : `[ENVIRONMENT]/prod/user/status`  
 > **Description** : Renseigne sur le statut des [commandes](command.md#move) de l'agent.
 
 Réponse :
@@ -55,7 +55,7 @@ Réponse :
 
 ### <a name="objective"></a> Objective Reached
 
-> **Topic** : `[TOPIC_PREFIX]/prod/user/objective-reached`  
+> **Topic** : `[ENVIRONMENT]/prod/user/objective-reached`  
 > **Description** : L'agent a atteint un objectif de sa [mission](interactionschema.md#missionstart).
 
 Réponse :
@@ -74,7 +74,7 @@ Réponse :
 ## L'environnement
 ### <a name="weather"></a> Météo
 
-> **Topic** : `[TOPIC_PREFIX]/prod/context/change/weather`  
+> **Topic** : `[ENVIRONMENT]/prod/context/change/weather`  
 > **Description** : changement de météo.
 
 Payload :
@@ -88,7 +88,7 @@ Payload :
 
 ### <a name="air"></a> Qualité de l'air
 
-> **Topic** : `[TOPIC_PREFIX]/prod/context/change/air`  
+> **Topic** : `[ENVIRONMENT]/prod/context/change/air`  
 > **Description** : changement de la qualité de l'air.
 
 Payload :
@@ -112,7 +112,7 @@ Les événements incidents entraînent un "freeze" de la ville et du déplacemen
 
 ### <a name="route"></a> Fermeture/ouverture de route
 
-> **Topic** : `[TOPIC_PREFIX]/prod/environment/change/roads_status`  
+> **Topic** : `[ENVIRONMENT]/prod/environment/change/roads_status`  
 > **Description** : événement concernant les voies dont l'accessibilité vient d'être modifiée pour les robotaxis(car), les vélos (bike) et à pieds (walk). 
 RAPPEL: Le métro est géré à part
 
@@ -193,7 +193,7 @@ Payload :
 
 ### <a name="route"></a> Fermeture/ouverture de ligne de métro
 
-> **Topic** : `[TOPIC_PREFIX]/prod/environment/change/lines_state`  
+> **Topic** : `[ENVIRONMENT]/prod/environment/change/lines_state`  
 > **Description** : événement concernant l'accessibilité des lignes de métro
 
 Payload :
@@ -226,7 +226,7 @@ Payload :
 
 ### <a name="route"></a> Ralentissement des voies de circulation
 
-> **Topic** : `[TOPIC_PREFIX]/prod/environment/change/traffic_conditions`  
+> **Topic** : `[ENVIRONMENT]/prod/environment/change/traffic_conditions`  
 > **Description** : événement concernant les voies de ciculation subissant un changement de la fluidité du traffic
 
 Payload :
@@ -259,7 +259,7 @@ Payload :
 
 ### <a name="route"></a> Panne de robotaxi
 
-> **Topic** : `[TOPIC_PREFIX]/prod/environment/change/breakdown`  
+> **Topic** : `[ENVIRONMENT]/prod/environment/change/breakdown`  
 > **Description** : événement concernant les pannes de robotaxi
 
 Payload :
@@ -275,7 +275,7 @@ Payload :
 
 ### <a name="vehicle"></a> Vehicle attitude
 
-> **Topic** : `[TOPIC_PREFIX]/prod/{id}/status/attitude`  
+> **Topic** : `[ENVIRONMENT]/prod/{id}/status/attitude`  
 > **Description** : changement d'attitude du robotaxi `{id}`
 
 Réponse :
@@ -309,7 +309,7 @@ Réponse :
 
 ## <a name="missionstart"></a> Evénement initial de déclenchement de la mission
 
-> **Topic** : `[TOPIC_PREFIX]/prod/user/mission`  
+> **Topic** : `[ENVIRONMENT]/prod/user/mission`  
 > **Description** : événement qui donne la mission de l'agent. Il s'agit de l'événement de départ du scénario de démo de votre application.
 
 Réponse :

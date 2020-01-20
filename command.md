@@ -10,7 +10,7 @@ Lors de la démo finale, ou pendant vos tests sur la MeaooCity réelle, ces comm
 ### <a name="reset"></a> Reset
 
 > **Protocol** : MQTT  
-> **Topic** : `[TOPIC_PREFIX]/prod/city/reset`  
+> **Topic** : `[ENVIRONMENT]/prod/city/reset`  
 > **QoS** : `0`  
 > **Description** : permet de réinitialiser le MeaooTime de l'agent
 
@@ -19,7 +19,7 @@ Payload : vide
 ### <a name="teleport"></a> Téléporter l'agent
 
 > **Protocol** : MQTT  
-> **Topic** : `[TOPIC_PREFIX]/prod/user/path-to-target`  
+> **Topic** : `[ENVIRONMENT]/prod/user/path-to-target`  
 > **QoS** : `0`  
 > **Description** : téléporte l'agent à un endroit de la map. Permet de tester les cas que l'on souhaite
 
@@ -44,7 +44,7 @@ Payload :
 ### <a name="circulation"></a> Changer les conditions de circulation
 
 > **Protocol** : MQTT  
-> **Topic** : `[TOPIC_PREFIX]/prod/city/morph/traffic_conditions`  
+> **Topic** : `[ENVIRONMENT]/prod/city/morph/traffic_conditions`  
 > **QoS** : `0`  
 > **Description** : modifie les conditions de circulation dans la ville (n'affecte que le déplacement en voiture)
 
@@ -64,7 +64,7 @@ Payload :
 ### <a name="fermerouvrirmetro"></a> Fermer/ouvrir une ligne de métro
 
 > **Protocol** : MQTT  
-> **Topic** : `[TOPIC_PREFIX]/prod/city/morph/lines_state`  
+> **Topic** : `[ENVIRONMENT]/prod/city/morph/lines_state`  
 > **QoS** : `0`  
 > **Description** : ferme ou ouvre une section de ligne de métro. Les lignes étant bi directionnelle, une statut est valable pour 1 sens de circulation. Il est donc possible de fermer seulement le sens de circulation A->B et pas B->A
 
@@ -84,7 +84,7 @@ Payload :
 ### <a name="fermerouvrirmetro"></a> Fermer/ouvrir une route
 
 > **Protocol** : MQTT  
-> **Topic** : `[TOPIC_PREFIX]/prod/city/morph/roads_status`  
+> **Topic** : `[ENVIRONMENT]/prod/city/morph/roads_status`  
 > **QoS** : `0`  
 > **Description** : Description ; ferme ou ouvre une route pour un moyen de transport donné. Certains moyens de transport routiers étant bi directionnels, un statut = 1 sens de circulation. Il est donc possible de fermer seulement le sens de circulation A->B et pas B->A
 
@@ -124,7 +124,7 @@ Payload :
 ### <a name="move"></a> Déplacer l'agent
 
 > **Protocol** : MQTT  
-> **Topic** : `[TOPIC_PREFIX]/prod/user/path`  
+> **Topic** : `[ENVIRONMENT]/prod/user/path`  
 > **QoS** : `0`  
 > **Description** : déplace l'agent depuis sa position courante vers une cible, en utilisant le moyen de transport indiqué <u>et le chemin le plus rapide</u>.
 
@@ -156,14 +156,14 @@ Exemple :
 
 ```java
 // déplace l'agent vers une cible et déplace une voiture vers la même cible
-publish '{"vehicle_type": "bike","target": {"x": 21.8, "y": 4.0}}' to '$TOPIC_PREFIX/prod/user/path'
-publish '{"vehicle_type": "car","target": {"x": 21.8, "y": 4.0}}' to '$TOPIC_PREFIX/prod/user/path'
+publish '{"vehicle_type": "bike","target": {"x": 21.8, "y": 4.0}}' to '$ENVIRONMENT/prod/user/path'
+publish '{"vehicle_type": "car","target": {"x": 21.8, "y": 4.0}}' to '$ENVIRONMENT/prod/user/path'
 
 // attendre que l'agent et la voiture aient atteint la cible 
 ...
 
 // déplacer l'agent (en voiture) vers une nouvelle cible
-publish '{"vehicle_type": "car","target": {"x": 14., "y": 2.0}}' to '$TOPIC_PREFIX/prod/user/path'
+publish '{"vehicle_type": "car","target": {"x": 14., "y": 2.0}}' to '$ENVIRONMENT/prod/user/path'
 ```
 
 #### Raisons pour lesquelles la commande pourrait ne pas fonctionner
@@ -174,12 +174,12 @@ publish '{"vehicle_type": "car","target": {"x": 14., "y": 2.0}}' to '$TOPIC_PREF
 * La destination est égale à la position courante.
 * Aucun [chemin](graph.md) ne permet d'aller à la cible.
 
-Dans tous les cas, vous pouvez souscrire au topic `[TOPIC_PREFIX]/prod/user/status` qui vous renseigne sur le [statut des commandes de déplacement](events.md#status) de l'agent. 
+Dans tous les cas, vous pouvez souscrire au topic `[ENVIRONMENT]/prod/user/status` qui vous renseigne sur le [statut des commandes de déplacement](events.md#status) de l'agent. 
 
 ### <a name="stop"></a> Arrêter l'agent en cours de déplacement
 
 > **Protocol** : MQTT  
-> **Topic** : `[TOPIC_PREFIX]/prod/user/stop`  
+> **Topic** : `[ENVIRONMENT]/prod/user/stop`  
 > **QoS** : `0`  
 > **Description** : arrête l'agent pendant un déplacement.
 

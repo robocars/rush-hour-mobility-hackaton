@@ -1,6 +1,6 @@
 # Exemple de mission simple sans incidents
 
-Je me suis abonné au topic `[TOPIC_PREFIX]/prod/user/mission` et j'ai reçu:
+Je me suis abonné au topic `[ENVIRONMENT]/prod/user/mission` et j'ai reçu:
 
 ```json
 {
@@ -16,7 +16,7 @@ Je me suis abonné au topic `[TOPIC_PREFIX]/prod/user/mission` et j'ai reçu:
 
 J'interroge alors les APIs à ma disposition pour récupérer la position actuelle de mon agent :
 
-`GET http://agent-controller.[NAMESPACE].xp65.renault-digital.com/api/user/situation/last`  
+`GET http://api.[ENVIRONMENT].xp65.renault-digital.com/agent-controller/api/user/situation/last`  
 
 ```json
 {
@@ -31,7 +31,7 @@ J'interroge alors les APIs à ma disposition pour récupérer la position actuel
 
 J'interroge le graphe pour aller à destination avec plusieurs moyens de transport différents:
 
-`POST http://graph.[NAMESPACE].xp65.renault-digital.com/road_graph/shortest_path/bike '{"departure": { "x":0.2, "y":1.8 }, "arrival": { "x":0.2, "y":0.2 }}'`
+`POST http://api.[ENVIRONMENT].xp65.renault-digital.com/graph/road_graph/shortest_path/bike '{"departure": { "x":0.2, "y":1.8 }, "arrival": { "x":0.2, "y":0.2 }}'`
 
 ```json
 {
@@ -47,7 +47,7 @@ J'interroge le graphe pour aller à destination avec plusieurs moyens de transpo
 }
 ```
 
-`POST http://graph.[NAMESPACE].xp65.renault-digital.com/road_graph/shortest_path/walk '{"departure": { "x":0.2, "y":1.8 }, "arrival": { "x":0.2, "y":0.2 }}'`
+`POST http://api.[ENVIRONMENT].xp65.renault-digital.com/graph/road_graph/shortest_path/walk '{"departure": { "x":0.2, "y":1.8 }, "arrival": { "x":0.2, "y":0.2 }}'`
 
 ```json
 {
@@ -67,6 +67,6 @@ J'affiche les informations obtenues à mon agent, à savoir que faire le déplac
 
 Mon agent choisi de faire le déplacement à pieds. J'informe l'écosystème du choix de mon agent pour faire un déplacement à l'aide de la commande move.
 
-Je publie `{"vehicle_type": "walk", "target": {"x": 0.2, "y": 0.2}}` sur le topic `[TOPIC_PREFIX]/prod/user/path`.
+Je publie `{"vehicle_type": "walk", "target": {"x": 0.2, "y": 0.2}}` sur le topic `[ENVIRONMENT]/prod/user/path`.
 
-Je peux constater le déplacement de mon agent en m'abonnant au topic `[TOPIC_PREFIX]/prod/user/situation` et constater qu'il a atteint son objectif en écoutant le topic `[TOPIC_PREFIX]/prod/user/mission`
+Je peux constater le déplacement de mon agent en m'abonnant au topic `[ENVIRONMENT]/prod/user/situation` et constater qu'il a atteint son objectif en écoutant le topic `[ENVIRONMENT]/prod/user/mission`

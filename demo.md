@@ -1,6 +1,6 @@
 # L'environnement de démo
 
-L'environnement de démo est une réplique de votre environnement de développement, avec en plus la [MeaooCity](concepts.md#city).
+L'environnement de démo est une réplique de votre environnement de développement.
 
 Plusieurs écrans géants vous permettront de projeter l'affichage de votre application (prévoyez les adapateurs nécessaires à vos machines pour se connecter à une prise HDMI), ainsi que la [MeaooMap](concepts.md#map).
 

@@ -1,4 +1,4 @@
-# La MeaooCar
+# La MeaooCar (non disponible pour ce hackathon)
 
 Véritable véhicule autonome miniature, il sera utilisé comme robotaxi dans l'écosystème Meaoo.
 

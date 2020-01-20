@@ -1,10 +1,10 @@
-# Lecontexte et votre mission
+# Le contexte et votre mission
 
 - Vous êtes la "French strategic apps team" en charge du développement des applications pour les agents de terrain
 
 - Votre objectif est de proposer une app offrant aux agents la meilleure Ux pour remplir leurs missions et ainsi d'obtenir le label convoité de "Special Ops App" 
 
-- Pour vous aider dans votre tâche un écosystème dernière génération de prototypage de services de mobilité est mis à votre disposition. Il s'agit de MEAOO qui a été spécialement conçu pour l'occasion avec passion par RD ;-)
+- Pour vous aider dans votre tâche un écosystème dernière génération de prototypage de services de mobilité est mis à votre disposition. Il s'agit de MEAOO qui a été spécialement conçu pour l'occasion avec passion par Renault Digital ;-)
 
 # Le challenge de votre application
 

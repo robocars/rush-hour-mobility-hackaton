@@ -38,11 +38,11 @@ Les unités utilisées sont exprimées en mètres et correspondent à la localis
 
 ## <a name="map"></a> La MeaooMap
 
-La MeaooMap est l'application qui vous permet de visualiser le terrain de jeu dans lequel votre agent va évoluer. Vous pouvez y accéder sur `http://control-tower.[NAMESPACE].xp65.renault-digital.com` (remplacez `[NAMESPACE]` par votre identifiant de namespace).
+La MeaooMap est l'application qui vous permet de visualiser le terrain de jeu dans lequel votre agent va évoluer. Vous pouvez y accéder sur `http://[ENVIRONMENT].xp65.renault-digital.com` (remplacez `[ENVIRONMENT]` par votre identifiant de namespace).
 
 La MeaooMap affiche non seulement la ville mais également le [MeaooTime](concepts.md#meaootime) consommé par votre agent ainsi que les aléas de circulation et le [contexte extérieur](context.md).
 
-## <a name="city"></a> La MeaooCity
+## <a name="city"></a> La MeaooCity (non disponible pour ce hackathon)
 
 La MeaooCity est la matérialisation physique de la ville, elle mesure 22m x 6m. 
 Les routes sont matérialisées par des rubans de led qui réagissent aux événements de l'écosystème. 

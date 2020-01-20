@@ -26,18 +26,18 @@
         <tr valign="top">
             <td style="border-radius: 15px; background-color: #888;">
                 AGENT​<br />
-                http://agent-controller.[NAMESPACE].xp65.renault-digital.com​<br />
+                http://api.[ENVIRONMENT].xp65.renault-digital.com/agent-controller​<br />
                 <ul>
                     <li>api/user/situation/last​</li>
                 </ul>
                 CONTEXT​<br />
-                http://context-controller.[NAMESPACE].xp65.renault-digital.com​<br />
+                http://api.[ENVIRONMENT].xp65.renault-digital.com​/context-controller<br />
                 <ul>
                     <li>api/context/weather/current​</li>
                     <li>api/context/air/current​</li>
                 </ul>
                 CITY GRAPH​<br />
-                http://graph.[NAMESPACE].xp65.renault-digital.com<br />
+                http://api.[ENVIRONMENT].xp65.renault-digital.com/graph<br />
                 <ul>
                     <li>processed/vehicule.json​</li>
                     <li>processed/bike.json​</li>
@@ -61,7 +61,7 @@
                     <li>road_graph/reset_graph/subway <sup>(*)</sup></li>
                 </ul>
                 VEHICLE<br />
-                http://vehicle.[NAMESPACE].xp65.renault-digital.com​<br />
+                http://api.[ENVIRONMENT].xp65.renault-digital.com​/vehicle<br />
                 <ul>
                     <li>api/v1/vehicles</li>
                     <li>api/v1/vehicles/{id}</li>
@@ -72,45 +72,45 @@
                 AGENT​<br />
                 Solace bus address<br />
                 <ul>
-                    <li>[TOPIC_PREFIX]/prod/user/situation​</li>
-                    <li>[TOPIC_PREFIX]/prod/user/mission</li>
-                    <li>[TOPIC_PREFIX]/prod/user/objective-reached</li>
-                    <li>[TOPIC_PREFIX]/prod/user/status</li>
+                    <li>[ENVIRONMENT]/prod/user/situation​</li>
+                    <li>[ENVIRONMENT]/prod/user/mission</li>
+                    <li>[ENVIRONMENT]/prod/user/objective-reached</li>
+                    <li>[ENVIRONMENT]/prod/user/status</li>
                 </ul>
                 CONTEXT​<br />
                 Solace bus address<br />
                 <ul>
-                    <li>[TOPIC_PREFIX]/prod/context/change/weather</li>
-                    <li>[TOPIC_PREFIX]/prod/context/change/air</li>
+                    <li>[ENVIRONMENT]/prod/context/change/weather</li>
+                    <li>[ENVIRONMENT]/prod/context/change/air</li>
                 </ul>
                 CITY<br />
                 Solace bus address<br />
                 <ul>
-                    <li>[TOPIC_PREFIX]/prod/environment/change/roads_status​</li>
-                    <li>[TOPIC_PREFIX]/prod/environment/change/lines_state​</li>
-                    <li>[TOPIC_PREFIX]/prod/environment/change/traffic_conditions​</li>
-                    <li>[TOPIC_PREFIX]/prod/environment/change/breakdown</li>
+                    <li>[ENVIRONMENT]/prod/environment/change/roads_status​</li>
+                    <li>[ENVIRONMENT]/prod/environment/change/lines_state​</li>
+                    <li>[ENVIRONMENT]/prod/environment/change/traffic_conditions​</li>
+                    <li>[ENVIRONMENT]/prod/environment/change/breakdown</li>
                 </ul>
                 VEHICLE<br />
                 Solace bus address<br />
                 <ul>
-                    <li>[TOPIC_PREFIX]/prod/{id}/status/attitude​</li>
+                    <li>[ENVIRONMENT]/prod/{id}/status/attitude​</li>
                 </ul>
             </td>
             <td style="border-radius: 15px; background-color: #888;">
                 AGENT​<br />
                 Solace bus address<br />
                 <ul>
-                    <li>[TOPIC_PREFIX]/prod/user/path</li>
-                    <li>[TOPIC_PREFIX]/prod/user/path-to-target <sup>(*)</sup></li>
+                    <li>[ENVIRONMENT]/prod/user/path</li>
+                    <li>[ENVIRONMENT]/prod/user/path-to-target <sup>(*)</sup></li>
                 </ul>
                 CITY<br />
                 Solace bus address<br />
                 <ul>
-                    <li>[TOPIC_PREFIX]/prod/city/reset <sup>(*)</sup></li>
-                    <li>[TOPIC_PREFIX]/prod/city/morph/traffic_conditions <sup>(*)</sup></li>
-                    <li>[TOPIC_PREFIX]/prod/city/morph/lines_state <sup>(*)</sup></li>
-                    <li>[TOPIC_PREFIX]/prod/city/morph/roads_status <sup>(*)</sup></li>
+                    <li>[ENVIRONMENT]/prod/city/reset <sup>(*)</sup></li>
+                    <li>[ENVIRONMENT]/prod/city/morph/traffic_conditions <sup>(*)</sup></li>
+                    <li>[ENVIRONMENT]/prod/city/morph/lines_state <sup>(*)</sup></li>
+                    <li>[ENVIRONMENT]/prod/city/morph/roads_status <sup>(*)</sup></li>
                 * = DEV env​
                 </ul>
             </td>
