@@ -16,7 +16,7 @@ Je me suis abonné au topic `[ENVIRONMENT]/prod/user/mission` et j'ai reçu:
 
 J'interroge alors les APIs à ma disposition pour récupérer la position actuelle de mon agent :
 
-`GET http://api.[ENVIRONMENT].xp65.renault-digital.com/agent-controller/api/user/situation/last`  
+`GET http://[ENVIRONMENT].xp65.renault-digital.com/api/agent/api/user/situation/last`  
 
 ```json
 {
@@ -31,7 +31,7 @@ J'interroge alors les APIs à ma disposition pour récupérer la position actuel
 
 J'interroge le graphe pour aller à destination avec plusieurs moyens de transport différents:
 
-`POST http://api.[ENVIRONMENT].xp65.renault-digital.com/graph/road_graph/shortest_path/bike '{"departure": { "x":0.2, "y":1.8 }, "arrival": { "x":0.2, "y":0.2 }}'`
+`POST http://[ENVIRONMENT].xp65.renault-digital.com/api/graph/road_graph/shortest_path/bike '{"departure": { "x":0.2, "y":1.8 }, "arrival": { "x":0.2, "y":0.2 }}'`
 
 ```json
 {
@@ -47,7 +47,7 @@ J'interroge le graphe pour aller à destination avec plusieurs moyens de transpo
 }
 ```
 
-`POST http://api.[ENVIRONMENT].xp65.renault-digital.com/graph/road_graph/shortest_path/walk '{"departure": { "x":0.2, "y":1.8 }, "arrival": { "x":0.2, "y":0.2 }}'`
+`POST http://[ENVIRONMENT].xp65.renault-digital.com/api/graph/road_graph/shortest_path/walk '{"departure": { "x":0.2, "y":1.8 }, "arrival": { "x":0.2, "y":0.2 }}'`
 
 ```json
 {

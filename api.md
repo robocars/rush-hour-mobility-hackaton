@@ -4,7 +4,7 @@ Plusieurs API sont mises à votre disposition pour obtenir des informations sur 
 
 ## Agent
 
-> **Base URL** : `http://api.[ENVIRONMENT].xp65.renault-digital.com/agent-controller`  
+> **Base URL** : `http://[ENVIRONMENT].xp65.renault-digital.com/api/agent`  
 
 > **Description** : Cette API permet de récupérer les informations relatives à votre agent.
 
@@ -35,7 +35,7 @@ Réponse :
 
 ## <a name="context"></a> Context
 
-> **Base URL** : `http://api.[ENVIRONMENT].xp65.renault-digital.com/context-controller`  
+> **Base URL** : `http://[ENVIRONMENT].xp65.renault-digital.com/api/context`  
 > **Description** : Cette API permet de récupérer les informations relatives au contexte extérieur à la MeaooCity.
 
 ### <a name="weather"></a> Météo
@@ -72,7 +72,7 @@ Réponse :
 
 ## <a name="graph"></a> Graph
 
-> **Base URL** : `http://api.[ENVIRONMENT].xp65.renault-digital.com/graph`  
+> **Base URL** : `http://[ENVIRONMENT].xp65.renault-digital.com/api/graph`  
 
 ### <a name="fichiers_graph"></a> Fichiers de graphe de la ville
 
@@ -548,7 +548,7 @@ Réponse:
 
 ## <a name="vehicles"></a> Vehicules
 
-> **Base URL** : `http://api.[ENVIRONMENT].xp65.renault-digital.com/vehicle`  
+> **Base URL** : `http://[ENVIRONMENT].xp65.renault-digital.com/api/vehicle`  
 
 > **Description** : Cette API permet de récupérer les informations courantes concernant les robotaxi présents dans la ville.
 

@@ -26,18 +26,18 @@
         <tr valign="top">
             <td style="border-radius: 15px; background-color: #888;">
                 AGENT​<br />
-                http://api.[ENVIRONMENT].xp65.renault-digital.com/agent-controller​<br />
+                http://[ENVIRONMENT].xp65.renault-digital.com/api/agent​<br />
                 <ul>
                     <li>api/user/situation/last​</li>
                 </ul>
                 CONTEXT​<br />
-                http://api.[ENVIRONMENT].xp65.renault-digital.com​/context-controller<br />
+                http://[ENVIRONMENT].xp65.renault-digital.com​/api/context<br />
                 <ul>
                     <li>api/context/weather/current​</li>
                     <li>api/context/air/current​</li>
                 </ul>
                 CITY GRAPH​<br />
-                http://api.[ENVIRONMENT].xp65.renault-digital.com/graph<br />
+                http://[ENVIRONMENT].xp65.renault-digital.com/api/graph<br />
                 <ul>
                     <li>processed/vehicule.json​</li>
                     <li>processed/bike.json​</li>
@@ -61,7 +61,7 @@
                     <li>road_graph/reset_graph/subway <sup>(*)</sup></li>
                 </ul>
                 VEHICLE<br />
-                http://api.[ENVIRONMENT].xp65.renault-digital.com​/vehicle<br />
+                http://[ENVIRONMENT].xp65.renault-digital.com​/api/vehicle<br />
                 <ul>
                     <li>api/v1/vehicles</li>
                     <li>api/v1/vehicles/{id}</li>
