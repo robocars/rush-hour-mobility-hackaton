@@ -41,6 +41,8 @@ Payload :
 |`path`|doit contenir impérativement un array de deux valeurs, chacune d'entre elle étant un array contenant une position x et y. Le second array contient l'endroit où téléporter l'agent (dans notre cas x=20.9 et Y=5.6. Le premier array est la même position décalée de +/- 0.1 sur x ou sur y |
 |`cost`|doit impérativement contenir deux valeurs à 0 (donc à ne pas modifier) |
 
+Note : cette commande peut également être utilisée pour téléporter un taxi. Il suffit de remplacer `walk` par `car` dans le payload json.
+
 ### <a name="circulation"></a> Changer les conditions de circulation
 
 > **Protocol** : MQTT  
